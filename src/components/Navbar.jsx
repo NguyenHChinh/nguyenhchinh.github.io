@@ -1,18 +1,10 @@
 import { useEffect, useState } from "react";
 
 function Navbar() {
-    const [isDarkMode, setIsDarkMode] = useState(() => 
-        document.documentElement.classList.contains("dark")
-    );
+    const [isDarkMode, setIsDarkMode] = useState(false);
 
     useEffect(() => {
-        if (isDarkMode) {
-            document.documentElement.classList.add("dark");
-        }
-        else {
-            document.documentElement.classList.remove("dark");
-        }
-        localStorage.setItem("darkMode", isDarkMode);
+        
     }, [isDarkMode]);
 
     function toggleMode() {
@@ -21,14 +13,8 @@ function Navbar() {
 
     return (
         <div className="navbar-container">
-            <nav className="text-3xl w-full px-6 py-4 flex justify-between items-center fixed top-0 z-50 bg-transparent">
-            <div
-                className="font-semibold cursor-pointer"
-                onClick={() => toggleMode()}
-            >
-                {isDarkMode ? "Lights On" : "Lights Off"}
-            </div>
-            <div className="flex space-x-6 font-medium">
+            <nav className="text-x2 sm:text-3xl lg:text-3xl py-4 pr-6 flex justify-end items-center fixed top-5 right-5 z-50 bg-transparent">
+            <div className="flex gap-x-8 font-medium">
                 {["About", "Skills", "Projects", "Contact"].map((item) => (
                 <button
                     key={item}
