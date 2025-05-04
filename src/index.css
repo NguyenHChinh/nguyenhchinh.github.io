@@ -19,3 +19,11 @@ html{
     margin: 0 auto;
     margin-top: 16rem;
 }
+
+.hero-title{
+    margin: left;
+    margin-bottom: 6rem;
+}
+
+.navbar-container{
+}
