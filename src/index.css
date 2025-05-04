@@ -8,6 +8,25 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+  
+body {
+    background: linear-gradient(
+        to bottom right,
+        #eeeeee 0%,
+        #eeeeee 10%,
+        #d4e8ff 100%
+    );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+  
+  
 html{
     scroll-behavior: smooth;
 }
@@ -18,6 +37,10 @@ html{
     width: 80%;
     margin: 0 auto;
     margin-top: 16rem;
+}
+
+.hero h1, .hero h2{
+    margin-bottom: .25rem;
 }
 
 .hero-title{

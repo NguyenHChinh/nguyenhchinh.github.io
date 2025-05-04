@@ -13,7 +13,7 @@ function Navbar() {
 
     return (
         <div className="navbar-container">
-            <nav className="text-x2 sm:text-3xl lg:text-3xl py-4 pr-6 flex justify-end items-center fixed top-5 right-5 z-50 bg-transparent">
+            <nav className="text-2xl sm:text-3xl lg:text-3xl py-4 pr-6 flex justify-end items-center fixed top-5 right-5 z-50 bg-transparent">
             <div className="flex gap-x-8 font-medium">
                 {["About", "Skills", "Projects", "Contact"].map((item) => (
                 <button

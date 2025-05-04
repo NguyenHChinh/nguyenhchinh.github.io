@@ -10,10 +10,10 @@ function App() {
           <h2 className="text-xl sm:text-2xl lg:text-3xl">
             Hi, my name is
           </h2>
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-medium">
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-medium">
             <span className="bg-gradient-to-r from-blue-400 to-blue-700 bg-clip-text text-transparent">Chinh Nguyen</span>,
           </h1>
-          <h2 className="text-4xl sm:text-6xl lg:text-7xl">
+          <h2 className="text-4xl sm:text-5xl lg:text-7xl">
             I'm a <span className="bg-gradient-to-r from-blue-700 to-blue-400 bg-clip-text text-transparent font-medium">Software Developer</span>
           </h2>
         </div>
