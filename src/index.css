@@ -12,7 +12,6 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
 }
   
 body {
@@ -37,6 +36,7 @@ html{
     width: 85%;
     margin: 0 auto;
     margin-top: 16rem;
+    margin-bottom: 6rem;
 }
 
 .hero-container h1, .hero h2{
@@ -51,4 +51,30 @@ html{
 .hero-title{
     margin: left;
     margin-bottom: 6rem;
+}
+
+.comment-line{
+    color: #008000;
+    font-family: Consolas;
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+    font-size: 1.75rem;
+    margin-bottom: 6rem;
+}
+
+.skills-container{
+    margin-bottom: 6rem;
+}
+
+.skills-title{
+    margin-bottom: 2rem;
+}
+
+.projects-container{
+    margin-bottom: 6rem;
+}
+
+.projects-title{
+    margin-bottom: 2rem;
 }

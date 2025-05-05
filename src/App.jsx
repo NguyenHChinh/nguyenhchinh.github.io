@@ -1,4 +1,5 @@
 import Navbar from './components/Navbar'
+import CommentLine from './components/CommentLine'
 
 function App() {
 
@@ -23,6 +24,40 @@ function App() {
             and I <span className='font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-400'>love building things</span>.
           </p>
         </div>
+      </div>
+
+      <CommentLine/>
+
+      <div className='skills-container'>
+        <h1 className='skills-title w-full text-3xl sm:text-4xl lg:text-5xl font-bold text-center'>
+          Here's what I use.
+        </h1>
+
+        <h2 className='w-full text-2xl sm:text-3xl lg:text-4xl font-medium text-center'>
+          PLACEHOLDER <br/>
+          PLACEHOLDER <br/>
+          PLACEHOLDER <br/>
+          PLACEHOLDER <br/>
+          PLACEHOLDER <br/>
+          PLACEHOLDER <br/>
+        </h2>
+      </div>
+
+      <CommentLine/>
+
+      <div className='projects-container'>
+        <h1 className='projects-title w-full text-3xl sm:text-4xl lg:text-5xl font-bold text-center'>
+          Here's what I've built.
+        </h1>
+
+        <h2 className='w-full text-2xl sm:text-3xl lg:text-4xl font-medium text-center'>
+          PLACEHOLDER <br/>
+          PLACEHOLDER <br/>
+          PLACEHOLDER <br/>
+          PLACEHOLDER <br/>
+          PLACEHOLDER <br/>
+          PLACEHOLDER <br/>
+        </h2>
       </div>
     </div>
   )
