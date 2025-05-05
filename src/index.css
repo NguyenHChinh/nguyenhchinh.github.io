@@ -34,13 +34,18 @@ html{
 .hero{
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     margin-top: 16rem;
 }
 
 .hero h1, .hero h2{
     margin-bottom: .25rem;
+}
+
+.hero .comment{
+    color: #008000;
+    font-family: Consolas;
 }
 
 .hero-title{
