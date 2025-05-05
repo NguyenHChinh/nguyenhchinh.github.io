@@ -53,6 +53,27 @@ html{
     margin-bottom: 6rem;
 }
 
+.scroll-indicator {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: fadeInOut 2.5s ease-in-out infinite;
+    opacity: 0.25;
+    pointer-events: none;
+    z-index: 50;
+  }
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 0.75;
+    }
+}
+  
+
 .comment-line{
     color: #008000;
     font-family: Consolas;
@@ -78,3 +99,4 @@ html{
 .projects-title{
     margin-bottom: 2rem;
 }
+

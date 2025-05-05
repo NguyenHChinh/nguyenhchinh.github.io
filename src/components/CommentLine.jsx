@@ -16,7 +16,7 @@ function CommentLine() {
     }, []);
 
     useEffect(() => {
-        console.log(line);
+        // console.log(line); // Used to debug
     }, [line]);
 
     return(

@@ -1,7 +1,28 @@
 import Navbar from './components/Navbar'
 import CommentLine from './components/CommentLine'
+import { useState, useEffect } from 'react';
 
 function App() {
+  const [atTop, setAtTop] = useState(true);
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+
+  useEffect(() => {
+    function handleScroll() {
+      setAtTop(window.scrollY === 0);
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowHeight(window.innerHeight);
+    }
+  
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div className='App'>
@@ -26,38 +47,70 @@ function App() {
         </div>
       </div>
 
-      <CommentLine/>
+      {atTop && windowHeight > 700 && (
+        <p className="scroll-indicator text-gray-400 text-lg sm:text-xl lg:text-2xl text-center mt-8">
+          ↓ Scroll down for more information ↓
+        </p>
+      )}
 
-      <div className='skills-container'>
-        <h1 className='skills-title w-full text-3xl sm:text-4xl lg:text-5xl font-bold text-center'>
-          Here's what I use.
-        </h1>
+      <div className={`transition-opacity duration-300 ${atTop ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+        <CommentLine/>
 
-        <h2 className='w-full text-2xl sm:text-3xl lg:text-4xl font-medium text-center'>
-          PLACEHOLDER <br/>
-          PLACEHOLDER <br/>
-          PLACEHOLDER <br/>
-          PLACEHOLDER <br/>
-          PLACEHOLDER <br/>
-          PLACEHOLDER <br/>
-        </h2>
-      </div>
+        <div className='skills-container'>
+          <h1 className='skills-title w-full text-3xl sm:text-4xl lg:text-5xl font-bold text-center'>
+            Here's what I use.
+          </h1>
 
-      <CommentLine/>
+          <h2 className='w-full text-2xl sm:text-3xl lg:text-4xl font-medium text-center'>
+            PLACEHOLDER <br/>
+            PLACEHOLDER <br/>
+            PLACEHOLDER <br/>
+            PLACEHOLDER <br/>
+            PLACEHOLDER <br/>
+            PLACEHOLDER <br/>
+            PLACEHOLDER <br/>
+            PLACEHOLDER <br/>
+            PLACEHOLDER <br/>
+            PLACEHOLDER <br/>
+            PLACEHOLDER <br/>
+            PLACEHOLDER <br/>
+            PLACEHOLDER <br/>
+            PLACEHOLDER <br/>
+            PLACEHOLDER <br/>
+            PLACEHOLDER <br/>
+            PLACEHOLDER <br/>
+            PLACEHOLDER <br/>
+          </h2>
+        </div>
 
-      <div className='projects-container'>
-        <h1 className='projects-title w-full text-3xl sm:text-4xl lg:text-5xl font-bold text-center'>
-          Here's what I've built.
-        </h1>
+        <CommentLine/>
 
-        <h2 className='w-full text-2xl sm:text-3xl lg:text-4xl font-medium text-center'>
-          PLACEHOLDER <br/>
-          PLACEHOLDER <br/>
-          PLACEHOLDER <br/>
-          PLACEHOLDER <br/>
-          PLACEHOLDER <br/>
-          PLACEHOLDER <br/>
-        </h2>
+        <div className='projects-container'>
+          <h1 className='projects-title w-full text-3xl sm:text-4xl lg:text-5xl font-bold text-center'>
+            Here's what I've built.
+          </h1>
+
+          <h2 className='w-full text-2xl sm:text-3xl lg:text-4xl font-medium text-center'>
+            PLACEHOLDER <br/>
+            PLACEHOLDER <br/>
+            PLACEHOLDER <br/>
+            PLACEHOLDER <br/>
+            PLACEHOLDER <br/>
+            PLACEHOLDER <br/>
+            PLACEHOLDER <br/>
+            PLACEHOLDER <br/>
+            PLACEHOLDER <br/>
+            PLACEHOLDER <br/>
+            PLACEHOLDER <br/>
+            PLACEHOLDER <br/>
+            PLACEHOLDER <br/>
+            PLACEHOLDER <br/>
+            PLACEHOLDER <br/>
+            PLACEHOLDER <br/>
+            PLACEHOLDER <br/>
+            PLACEHOLDER <br/>
+          </h2>
+        </div>
       </div>
     </div>
   )
