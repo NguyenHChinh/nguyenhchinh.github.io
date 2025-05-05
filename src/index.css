@@ -33,10 +33,11 @@ html{
 .hero-container{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
     width: 85%;
     margin: 0 auto;
-    margin-top: 16rem;
-    margin-bottom: 6rem;
+    margin-bottom: 1rem;
 }
 
 .hero-container h1, .hero h2{
@@ -50,7 +51,10 @@ html{
 
 .hero-title{
     margin: left;
-    margin-bottom: 6rem;
+}
+
+.hero-description{
+    margin-top: 6rem;
 }
 
 .scroll-indicator {

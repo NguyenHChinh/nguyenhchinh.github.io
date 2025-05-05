@@ -39,12 +39,15 @@ function App() {
             I'm a <span className='bg-gradient-to-r from-blue-700 to-blue-400 bg-clip-text text-transparent font-medium'>Fullstack Developer</span>
           </h2>
         </div>
-        <div className='hero-description'>
-          <p className='text-lg sm:text-2xl lg:text-3xl text-justify'>
-            I graduated from the <span className='font-bold'>University of Kansas</span> with a Bachelor's in Computer Science,
-            and I <span className='font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-400'>love building things</span>.
-          </p>
-        </div>
+
+        {(windowHeight > 500 || !atTop) && (
+          <div className='hero-description'>
+            <p className='text-lg sm:text-2xl lg:text-3xl text-justify'>
+              I graduated from the <span className='font-bold'>University of Kansas</span> with a Bachelor's in Computer Science,
+              and I <span className='font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-400'>love building things</span>.
+            </p>
+          </div>
+        )}
       </div>
 
       {atTop && windowHeight > 700 && (
