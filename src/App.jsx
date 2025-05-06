@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar'
 import CommentLine from './components/CommentLine'
+import Skill from './components/Skill'
 import { useState, useEffect } from 'react';
 
 function App() {
@@ -75,6 +76,12 @@ function App() {
             <p>Backend<span className='key-box backend-box'/></p>
             <p>Database<span className='key-box database-box'/></p>
           </div>
+
+
+          <div className='skills-list-container'>
+            <Skill/>
+          </div>
+
 
           <h2 className='w-full text-2xl sm:text-3xl lg:text-4xl font-medium text-center'>
             PLACEHOLDER <br/>
