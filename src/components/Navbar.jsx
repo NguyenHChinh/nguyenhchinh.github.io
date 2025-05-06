@@ -40,19 +40,19 @@ function Navbar() {
 
     return (
         <div className={`navbar-container transition-opacity duration-300 ${visible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-            <nav className='text-2xl sm:text-3xl lg:text-3xl py-4 pr-6 flex justify-end items-center fixed top-5 right-5 z-50 bg-transparent'>
-            <div className='flex gap-x-10 font-medium'>
-                {['About', 'Skills', 'Projects', 'Contact'].map((item) => (
+        <nav className='text-2xl sm:text-3xl lg:text-3xl py-4 pr-6 flex justify-center sm:justify-end items-center fixed top-5 right-5 left-5 sm:left-auto z-50 bg-transparent'>
+            <div className='flex gap-x-10 sm:gap-x-12 font-bold'>
+            {['About', 'Skills', 'Projects', 'Contact'].map((item) => (
                 <button
-                    key={item}
-                    className='hover:text-blue-600 transition-colors cursor-pointer'
-                    onClick={() => handleClick(item.toLowerCase())}
+                key={item}
+                className='hover:text-blue-600 transition-colors cursor-pointer'
+                onClick={() => handleClick(item.toLowerCase())}
                 >
-                    {item}
+                {item}
                 </button>
-                ))}
+            ))}
             </div>
-            </nav>
+        </nav>
         </div>
       );
 }
