@@ -69,7 +69,7 @@ function App() {
             // and I'm always looking to add more to it. <br/>
           </h2>
 
-          <div className='skills-key'>
+          <div className='skills-key origin-top-right scale-74 sm:scale-81 lg:scale-100'>
             <p className='text-3xl font-bold mb-1'>Key</p>
             <p>Languages<span className='key-box languages-box'/></p>
             <p>Frameworks<span className='key-box frameworks-box'/></p>
@@ -77,9 +77,29 @@ function App() {
             <p>Database<span className='key-box database-box'/></p>
           </div>
 
-
-          <div className='skills-list-container'>
-            <Skill/>
+          <div className="w-full flex justify-center">
+            <div className="skills-list-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
+              <Skill
+                title={"Ex. Languages"}
+                description={"Description Languages"}
+                type={"languages"}
+                icon={"a"}/>
+              <Skill
+                title={"Ex. Frameworks"}
+                description={"Description Frameworks"}
+                type={"frameworks"}
+                icon={"b"}/>
+              <Skill
+                title={"Ex. Backend"}
+                description={"Description Backend"}
+                type={"backend"}
+                icon={"c"}/>
+              <Skill
+                title={"Ex. Database"}
+                description={"Description Database"}
+                type={"database"}
+                icon={"d"}/>
+            </div>
           </div>
 
 
