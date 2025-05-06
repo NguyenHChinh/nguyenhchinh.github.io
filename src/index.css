@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 @import 'tailwindcss';
 
 *{
@@ -37,7 +38,6 @@ html{
     min-height: 100vh;
     width: 85%;
     margin: 0 auto;
-    margin-bottom: 1rem;
 }
 
 .hero-container h1, .hero h2{
@@ -46,7 +46,7 @@ html{
 
 .hero-container .comment{
     color: #008000;
-    font-family: Consolas;
+    font-family: Consolas, 'Fira Code', 'Courier New', Courier, monospace;
 }
 
 .hero-title{
@@ -80,20 +80,65 @@ html{
 
 .comment-line{
     color: #008000;
-    font-family: Consolas;
+    font-family: Consolas, 'Fira Code', 'Courier New', Courier, monospace;
     margin: 0 auto;
     width: 90%;
     text-align: center;
     font-size: 1.75rem;
-    margin-bottom: 6rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.comment-block{
+    color: #008000;
+    font-family: Consolas, 'Fira Code', 'Courier New', Courier, monospace;
+    margin-bottom: 2rem;
 }
 
 .skills-container{
     margin-bottom: 6rem;
+    width: 85%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.skills-key{
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    text-align: right;
+    /* padding: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+.key-box{
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin-left: 0.5rem;
+    border-radius: 2px;
+    transform: translateY(3px);
+}
+
+.languages-box{
+    background-color: rgb(255, 81, 81);
+}
+
+.frameworks-box{
+    background-color: rgb(75, 123, 255);
+}
+
+.backend-box{
+    background-color: rgb(39, 155, 39);
+}
+
+.database-box{
+    background-color: rgb(218, 191, 106);
 }
 
 .skills-title{
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
 }
 
 .projects-container{
@@ -101,6 +146,6 @@ html{
 }
 
 .projects-title{
-    margin-bottom: 2rem;
+    margin-bottom: .75rem;
 }
 

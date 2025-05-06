@@ -60,9 +60,21 @@ function App() {
         <CommentLine/>
 
         <div className='skills-container'>
-          <h1 className='skills-title w-full text-3xl sm:text-4xl lg:text-5xl font-bold text-center'>
+          <h1 className='skills-title w-full text-4xl sm:text-5xl lg:text-7xl font-bold text-left'>
             Here's what I use.
           </h1>
+          <h2 className='comment-block leading-5.5 text-xs sm:text-base lg:text-lg'>
+            // This is my main tech stack, <br/>
+            // and I'm always looking to add more to it. <br/>
+          </h2>
+
+          <div className='skills-key'>
+            <p className='text-3xl font-bold mb-1'>Key</p>
+            <p>Languages<span className='key-box languages-box'/></p>
+            <p>Frameworks<span className='key-box frameworks-box'/></p>
+            <p>Backend<span className='key-box backend-box'/></p>
+            <p>Database<span className='key-box database-box'/></p>
+          </div>
 
           <h2 className='w-full text-2xl sm:text-3xl lg:text-4xl font-medium text-center'>
             PLACEHOLDER <br/>
