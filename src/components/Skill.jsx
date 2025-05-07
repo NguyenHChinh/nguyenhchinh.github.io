@@ -12,16 +12,19 @@ function Skill({ title, description, type, icon }) {
     useEffect(() => {
         switch (type) {
             case 'languages':
-                setBackgroundColor("bg-gradient-to-tr from-red-400 to-red-700");
+                setBackgroundColor("bg-gradient-to-tr from-blue-400 to-blue-700");
                 break;
             case 'frameworks':
-                setBackgroundColor("bg-gradient-to-tr from-blue-500 to-blue-700");
+                setBackgroundColor("bg-gradient-to-tr from-purple-500 to-purple-800");
                 break;
             case 'backend':
-                setBackgroundColor("bg-gradient-to-tr from-green-600 to-green-800");
+                setBackgroundColor("bg-gradient-to-tr from-red-500 to-red-900");
                 break;
             case 'database':
-                setBackgroundColor("bg-gradient-to-tr from-yellow-500 to-yellow-700");
+                setBackgroundColor("bg-gradient-to-tr from-green-600 to-green-800");
+                break;
+            case 'tools':
+                setBackgroundColor("bg-gradient-to-tr from-teal-600 to-teal-800");
                 break;
             default:
                 setBackgroundColor("bg-gradient-to-tr from-gray-500 to-gray-700");
@@ -30,15 +33,33 @@ function Skill({ title, description, type, icon }) {
     }, [type]);
 
     return(
-        <div className={`skill w-full h-20 ${backgroundColor} rounded-2xl flex items-center`}>
-            <div className='icon w-16 h-16 bg-gradient-to-bl from-gray-400 to-gray-600 rounded-xl items-center ml-2'>
+        <div className={`skill
+            h-12
+            md:h-14
+            lg:h-16
+            2xl:h-20
+            drop-shadow-lg/25 w-full ${backgroundColor} rounded-xl md:rounded-2xl flex items-center`}>
+
+            <div className='icon
+                w-9.5 h-9.5 ml-1.25
+                md:w-11 md:h-11 md:ml-1.5
+                lg:w-13 lg:h-13 lg:ml-1.5
+                2xl:w-16 2xl:h-16 2xl:ml-2
+                bg-radial from-gray-500 to-gray-600 rounded-lg md:rounded-xl lg:rounded-xl xl:rounded-xl items-center'>
                 
             </div>
             <div className='skill-text ml-2 text-white'>
-                <div className='text-xl font-bold'>
+                <div className='skill-title font-bold
+                    text-xs
+                    md:text-base
+                    lg:text-lg
+                    2xl:text-xl'>
                     {title}
                 </div>
-                <div className='text-sm font-light'>
+                <div className='skill-description font-light
+                    text-xs
+                    md:text-sm
+                    2xl:text-base'>
                     {description}
                 </div>
             </div>

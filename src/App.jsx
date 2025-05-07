@@ -61,24 +61,38 @@ function App() {
         <CommentLine/>
 
         <div className='skills-container'>
-          <h1 className='skills-title w-full text-4xl sm:text-5xl lg:text-7xl font-bold text-left'>
+          <h1 className='skills-title w-full mb-7 sm:mb-6  xl:mb-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-left'>
             Here's what I use.
           </h1>
-          <h2 className='comment-block leading-5.5 text-xs sm:text-base lg:text-lg'>
+          <h2 className='comment-block md:leading-5.5 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl'>
             // This is my main tech stack, <br/>
             // and I'm always looking to add more to it. <br/>
           </h2>
 
-          <div className='skills-key origin-top-right scale-74 sm:scale-81 lg:scale-100'>
+          {/* Skill Key v1 */}
+          <div className='skills-key origin-top-right scale-61 sm:scale-64 md:scale-70 lg:scale-80 xl:scale-85'>
             <p className='text-3xl font-bold mb-1'>Key</p>
             <p>Languages<span className='key-box languages-box'/></p>
             <p>Frameworks<span className='key-box frameworks-box'/></p>
             <p>Backend<span className='key-box backend-box'/></p>
             <p>Database<span className='key-box database-box'/></p>
+            <p>Tools<span className='key-box tools-box'/></p>
           </div>
 
-          <div className="w-full flex justify-center">
-            <div className="skills-list-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
+          {/* Skill Key v2 */}
+          {/* <div className='skills-key origin-top-right scale-74 sm:scale-81 lg:scale-100'>
+            <p className='text-3xl font-bold mb-1'>Key</p>
+            <div className='text-center'>
+              <p className='bg-red-500 mb-1 rounded-4xl px-3 py-1 text-white text-sm font-medium text-shadow-lg'>Languages</p>
+              <p className='bg-blue-500 mb-1 rounded-4xl px-3 py-1 text-white text-sm font-medium text-shadow-lg'>Frameworks</p>
+              <p className='bg-green-700 mb-1 rounded-4xl px-3 py-1 text-white text-sm font-medium text-shadow-lg'>Backend</p>
+              <p className='bg-purple-500 mb-1 rounded-4xl px-3 py-1 text-white text-sm font-medium text-shadow-lg'>Database</p>
+              <p className='bg-teal-700 mb-1 rounded-4xl px-3 py-1 text-white text-sm font-medium text-shadow-lg'>Tools</p>
+            </div>
+          </div> */}
+
+          <div className="w-full flex justify-center mt-8 md:mt-12 xl:mt-16 mb-10">
+            <div className="skills-list-container grid grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-2 sm:gap-3 lg:gap-4 xl:gap-5 w-full max-w-8xl">
               <Skill
                 title={"Ex. Languages"}
                 description={"Description Languages"}
@@ -99,6 +113,20 @@ function App() {
                 description={"Description Database"}
                 type={"database"}
                 icon={"d"}/>
+              <Skill
+                title={"Ex. Tools"}
+                description={"Description Tools"}
+                type={"tools"}
+                icon={"d"}/>
+            </div>
+          </div>
+
+          <div className='flex flex-row'>
+            <div className='test-skills h-50 w-2/5 bg-gray-600'>
+
+            </div>
+            <div className='tesujitweij h-50 w-3/5 bg-gray-800'>
+
             </div>
           </div>
 

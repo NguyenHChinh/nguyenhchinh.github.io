@@ -118,23 +118,23 @@ html{
 }
 
 .languages-box{
-    background-color: rgb(255, 81, 81);
+    background-color: rgb(69, 99, 184);
 }
 
 .frameworks-box{
-    background-color: rgb(75, 123, 255);
+    background-color: rgb(138, 67, 231);
 }
 
 .backend-box{
-    background-color: rgb(39, 155, 39);
+    background-color: rgb(199, 58, 58);
 }
 
 .database-box{
-    background-color: rgb(218, 191, 106);
+    background-color: rgb(39, 155, 39);
 }
 
-.skills-title{
-    margin-bottom: 1.25rem;
+.tools-box{
+    background-color: rgb(12, 116, 93);
 }
 
 .projects-container{
