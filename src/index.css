@@ -32,7 +32,6 @@ html{
     flex-direction: column;
     justify-content: center;
     min-height: 100vh;
-    width: 80%;
     margin: 0 auto;
 }
 
@@ -93,7 +92,6 @@ html{
 
 .skills-container{
     margin-bottom: 6rem;
-    width: 80%;
     margin: 0 auto;
     position: relative;
 }

@@ -55,7 +55,7 @@ function App() {
   return (
     <div className='App'>
       <Navbar />
-      <div className='hero-container'>
+      <div className='hero-container w-4/5'>
         <div className='hero-title'>
           <h2 className='comment text-base sm:text-xl lg:text-2xl'>
             // Hi, my name is
@@ -87,7 +87,7 @@ function App() {
       <div className={`transition-opacity duration-300 ${atTop ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
         <CommentLine/>
 
-        <div className='skills-container'>
+        <div className='skills-container w-9/10 sm:w-4/5'>
           <h1 className='skills-title w-full mb-7 sm:mb-6  xl:mb-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-left'>
             Here's what I use.
           </h1>
