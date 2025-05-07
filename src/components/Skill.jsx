@@ -29,7 +29,6 @@ function Skill({ title, description, type, icon }) {
             default:
                 setBackgroundColor("bg-gradient-to-tr from-gray-500 to-gray-700");
         }
-        console.log(type);
     }, [type]);
 
     return(
@@ -45,8 +44,11 @@ function Skill({ title, description, type, icon }) {
                 md:w-11 md:h-11 md:ml-1.5
                 lg:w-13 lg:h-13 lg:ml-1.5
                 2xl:w-16 2xl:h-16 2xl:ml-2
-                bg-radial from-gray-500 to-gray-600 rounded-lg md:rounded-xl lg:rounded-xl xl:rounded-xl items-center'>
-                
+                bg-radial from-gray-500 to-gray-600
+                rounded-lg md:rounded-xl lg:rounded-xl xl:rounded-xl
+                items-center overflow-hidden
+                flex justify-center'>
+                <img src={icon} alt={`${title} icon`} className="w-3/4 h-3/4 object-contain" />
             </div>
             <div className='skill-text ml-2 text-white'>
                 <div className='skill-title font-bold
