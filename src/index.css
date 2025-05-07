@@ -82,6 +82,10 @@ html{
     font-size: 1.75rem;
     margin-top: 4rem;
     margin-bottom: 4rem;
+    font-variant-ligatures: none;
+    -moz-font-feature-settings: "liga" 0;
+    -webkit-font-feature-settings: "liga" 0;
+    font-feature-settings: "liga" 0;
 }
 
 .comment-block{
