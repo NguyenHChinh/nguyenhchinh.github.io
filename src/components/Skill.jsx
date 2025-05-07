@@ -56,7 +56,7 @@ function Skill({ title, description, type, icon }) {
                 flex justify-center'>
                 <img src={icon} alt={`${title} icon`} className="w-3/4 h-3/4 object-contain" />
             </div>
-            <div className='skill-text ml-2 text-white'>
+            <div className='skill-text ml-2 2xl:ml-3 text-white'>
                 <div className='skill-title font-bold
                     text-xs
                     md:text-base
