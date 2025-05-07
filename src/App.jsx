@@ -2,6 +2,33 @@ import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar'
 import CommentLine from './components/CommentLine'
 import Skill from './components/Skill'
+import javascriptIcon from './icons/javascript.png'
+import pythonIcon from './icons/python.png'
+import cppIcon from './icons/cpp.png'
+import typescriptIcon from './icons/typescript.png'
+import sqlIcon from './icons/sql.png'
+import htmlIcon from './icons/html.png'
+import cssIcon from './icons/css.png'
+import phpIcon from './icons/php.png'
+import reactIcon from './icons/react.png'
+import nodeIcon from './icons/node.png'
+import viteicon from './icons/vite.png'
+import tailwindIcon from './icons/tailwind.png'
+import restapiIcon from './icons/restapi.png'
+import webhookIcon from './icons/webhook.png'
+import mysqlIcon from './icons/mysql.png'
+import nosqlIcon from './icons/nosql.png'
+import supabaseIcon from './icons/supabase.png'
+import localstorageIcon from './icons/localstorage.png'
+import gitIcon from './icons/git.png'
+import vscodeIcon from './icons/vscode.png'
+import postmanIcon from './icons/postman.png'
+import windowsIcon from './icons/windows.png'
+import ubuntuIcon from './icons/ubuntu.png'
+import figmaIcon from './icons/figma.png'
+import adobeIcon from './icons/adobe.png'
+import googleIcon from './icons/google.png'
+import microsoftIcon from './icons/microsoft.png'
 
 function App() {
   const [atTop, setAtTop] = useState(true);
@@ -93,64 +120,162 @@ function App() {
 
           <div className="w-full flex justify-center mt-8 md:mt-12 xl:mt-16 mb-10">
             <div className="skills-list-container grid grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-2 sm:gap-3 lg:gap-4 xl:gap-5 w-full max-w-8xl">
+              {/* SKILLS: LANGUAGES SECTION */}
               <Skill
-                title={"Ex. Languages"}
-                description={"Description Languages"}
+                title={"JavaScript"}
+                description={"MISSING DESCRIPTION"}
                 type={"languages"}
-                icon={""}/>
+                icon={javascriptIcon}/>
               <Skill
-                title={"Ex. Frameworks"}
-                description={"Description Frameworks"}
+                title={"Python"}
+                description={"MISSING DESCRIPTION"}
+                type={"languages"}
+                icon={pythonIcon}/>
+              <Skill
+                title={"C++"}
+                description={"MISSING DESCRIPTION"}
+                type={"languages"}
+                icon={cppIcon}/>
+              <Skill
+                title={"TypeScript"}
+                description={"MISSING DESCRIPTION"}
+                type={"languages"}
+                icon={typescriptIcon}/>
+              <Skill
+                title={"SQL"}
+                description={"MISSING DESCRIPTION"}
+                type={"languages"}
+                icon={sqlIcon}/>
+              <Skill
+                title={"HTML"}
+                description={"MISSING DESCRIPTION"}
+                type={"languages"}
+                icon={htmlIcon}/>
+              <Skill
+                title={"CSS"}
+                description={"MISSING DESCRIPTION"}
+                type={"languages"}
+                icon={cssIcon}/>
+              <Skill
+                title={"PHP"}
+                description={"MISSING DESCRIPTION"}
+                type={"languages"}
+                icon={phpIcon}/>
+
+              {/* SKILLS: FRAMEWORKS SECTION */}
+              <Skill
+                title={"React"}
+                description={"MISSING DESCRIPTION"}
                 type={"frameworks"}
-                icon={""}/>
+                icon={reactIcon}/>
               <Skill
-                title={"Ex. Backend"}
+                title={"Node.js"}
+                description={"MISSING DESCRIPTION"}
+                type={"frameworks"}
+                icon={nodeIcon}/>
+              <Skill
+                title={"Vite"}
+                description={"MISSING DESCRIPTION"}
+                type={"frameworks"}
+                icon={viteicon}/>
+              <Skill
+                title={"Tailwind"}
+                description={"MISSING DESCRIPTION"}
+                type={"frameworks"}
+                icon={tailwindIcon}/>
+
+              {/* SKILLS: BACKEND SECTION */}
+              <Skill
+                title={"REST APIs"}
                 description={"Description Backend"}
                 type={"backend"}
-                icon={""}/>
+                icon={restapiIcon}/>
               <Skill
-                title={"Ex. Database"}
+                title={"Webhooks"}
+                description={"Description Backend"}
+                type={"backend"}
+                icon={webhookIcon}/>
+
+              {/* SKILLS: DATABASE SECTION */}
+              <Skill
+                title={"MySQL"}
                 description={"Description Database"}
                 type={"database"}
-                icon={""}/>
+                icon={mysqlIcon}/>
               <Skill
-                title={"Ex. Tools"}
+                title={"NoSQL"}
+                description={"Description Database"}
+                type={"database"}
+                icon={nosqlIcon}/>
+              <Skill
+                title={"Supabase"}
+                description={"Description Database"}
+                type={"database"}
+                icon={supabaseIcon}/>
+              <Skill
+                title={"LocalStorage"}
+                description={"Description Database"}
+                type={"database"}
+                icon={localstorageIcon}/>
+              
+              {/* SKILLS: TOOLS SECTION */}
+              <Skill
+                title={"Git"}
                 description={"Description Tools"}
                 type={"tools"}
-                icon={""}/>
+                icon={gitIcon}/>
+              <Skill
+                title={"VSCode"}
+                description={"Description Tools"}
+                type={"tools"}
+                icon={vscodeIcon}/>
+              <Skill
+                title={"Postman"}
+                description={"Description Tools"}
+                type={"tools"}
+                icon={postmanIcon}/>
+              <Skill
+                title={"Windows"}
+                description={"Description Tools"}
+                type={"tools"}
+                icon={windowsIcon}/>
+              <Skill
+                title={"Ubuntu"}
+                description={"Description Tools"}
+                type={"tools"}
+                icon={ubuntuIcon}/>
+              <Skill
+                title={"Figma"}
+                description={"Description Tools"}
+                type={"tools"}
+                icon={figmaIcon}/>
+              <Skill
+                title={"Adobe Suite"}
+                description={"Description Tools"}
+                type={"tools"}
+                icon={adobeIcon}/>
+              <Skill
+                title={"Google Workspace"}
+                description={"Description Tools"}
+                type={"tools"}
+                icon={googleIcon}/>
+              <Skill
+                title={"Microsoft Office"}
+                description={"Description Tools"}
+                type={"tools"}
+                icon={microsoftIcon}/>
             </div>
           </div>
 
-          <div className='flex flex-row'>
+          {/* This was my test so that I could try out a different layout. */}
+          {/* <div className='flex flex-row'>
             <div className='test-skills h-50 w-2/5 bg-gray-600'>
 
             </div>
             <div className='tesujitweij h-50 w-3/5 bg-gray-800'>
 
             </div>
-          </div>
-
-
-          <h2 className='w-full text-2xl sm:text-3xl lg:text-4xl font-medium text-center'>
-            PLACEHOLDER <br/>
-            PLACEHOLDER <br/>
-            PLACEHOLDER <br/>
-            PLACEHOLDER <br/>
-            PLACEHOLDER <br/>
-            PLACEHOLDER <br/>
-            PLACEHOLDER <br/>
-            PLACEHOLDER <br/>
-            PLACEHOLDER <br/>
-            PLACEHOLDER <br/>
-            PLACEHOLDER <br/>
-            PLACEHOLDER <br/>
-            PLACEHOLDER <br/>
-            PLACEHOLDER <br/>
-            PLACEHOLDER <br/>
-            PLACEHOLDER <br/>
-            PLACEHOLDER <br/>
-            PLACEHOLDER <br/>
-          </h2>
+          </div> */}
         </div>
 
         <CommentLine/>
