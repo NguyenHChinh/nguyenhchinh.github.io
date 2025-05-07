@@ -1,12 +1,18 @@
 import { useState, useEffect } from 'react';
+import missingIcon from '../icons/missing.png';
 
 function Skill({ title, description, type, icon }) {
 
     const [backgroundColor, setBackgroundColor] = useState("bg-gradient-to-tr from-blue-500 to-blue-700");
 
-    if (!title || !description || !type || !icon) {
+    if (!title || !description || !type) {
         console.error("Skill component requires title, key, and icon props.");
         return null;
+    }
+
+    if (!icon) {
+        console.warn(`Icon for ${title} is missing. Using default icon.`);
+        icon = missingIcon;
     }
 
     useEffect(() => {

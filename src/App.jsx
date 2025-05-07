@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar'
 import CommentLine from './components/CommentLine'
 import Skill from './components/Skill'
-import missingIcon from './icons/missing.png'
 
 function App() {
   const [atTop, setAtTop] = useState(true);
@@ -98,27 +97,27 @@ function App() {
                 title={"Ex. Languages"}
                 description={"Description Languages"}
                 type={"languages"}
-                icon={missingIcon}/>
+                icon={""}/>
               <Skill
                 title={"Ex. Frameworks"}
                 description={"Description Frameworks"}
                 type={"frameworks"}
-                icon={missingIcon}/>
+                icon={""}/>
               <Skill
                 title={"Ex. Backend"}
                 description={"Description Backend"}
                 type={"backend"}
-                icon={missingIcon}/>
+                icon={""}/>
               <Skill
                 title={"Ex. Database"}
                 description={"Description Database"}
                 type={"database"}
-                icon={missingIcon}/>
+                icon={""}/>
               <Skill
                 title={"Ex. Tools"}
                 description={"Description Tools"}
                 type={"tools"}
-                icon={missingIcon}/>
+                icon={""}/>
             </div>
           </div>
 
