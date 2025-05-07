@@ -55,7 +55,10 @@ function App() {
   return (
     <div className='App'>
       <Navbar />
+
+      {/* Title screen */}
       <div className='hero-container w-4/5'>
+        {/* Hero title */}
         <div className='hero-title'>
           <h2 className='comment text-base sm:text-xl lg:text-2xl'>
             // Hi, my name is
@@ -68,6 +71,7 @@ function App() {
           </h2>
         </div>
 
+        {/* Hero description */}
         {(windowHeight > 500 || !atTop) && (
           <div className='hero-description'>
             <p className='text-lg sm:text-2xl lg:text-3xl text-justify'>
@@ -78,12 +82,14 @@ function App() {
         )}
       </div>
 
+      {/* Bottom of hero title screen */}
       {atTop && windowHeight > 700 && (
         <p className="scroll-indicator text-gray-400 text-lg sm:text-xl lg:text-2xl text-center mt-8">
           ↓ Scroll down for more information ↓
         </p>
       )}
 
+      {/* Rest of page */}
       <div className={`transition-opacity duration-300 ${atTop ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
         <CommentLine/>
 
@@ -280,31 +286,22 @@ function App() {
 
         <CommentLine/>
 
+        {/* Projects Section */}
         <div className='projects-container'>
           <h1 className='projects-title w-full text-3xl sm:text-4xl lg:text-5xl font-bold text-center'>
             Here's what I've built.
           </h1>
 
-          <h2 className='w-full text-2xl sm:text-3xl lg:text-4xl font-medium text-center'>
-            PLACEHOLDER <br/>
-            PLACEHOLDER <br/>
-            PLACEHOLDER <br/>
-            PLACEHOLDER <br/>
-            PLACEHOLDER <br/>
-            PLACEHOLDER <br/>
-            PLACEHOLDER <br/>
-            PLACEHOLDER <br/>
-            PLACEHOLDER <br/>
-            PLACEHOLDER <br/>
-            PLACEHOLDER <br/>
-            PLACEHOLDER <br/>
-            PLACEHOLDER <br/>
-            PLACEHOLDER <br/>
-            PLACEHOLDER <br/>
-            PLACEHOLDER <br/>
-            PLACEHOLDER <br/>
-            PLACEHOLDER <br/>
-          </h2>
+          <div className='placeholder-box mx-auto w-8/10 h-250 bg-gray-300 rounded-4xl mt-18'>
+            <p className='text-center text-2xl font-bold text-gray-600 pt-10'>
+              W.I.P., coming soon!
+            </p>
+          </div>
+        </div>
+
+        {/* Footer Section */}
+        <div className='footer-container'>
+
         </div>
       </div>
     </div>
