@@ -123,145 +123,145 @@ function App() {
               {/* SKILLS: LANGUAGES SECTION */}
               <Skill
                 title={"JavaScript"}
-                description={"MISSING DESCRIPTION"}
+                description={"Dynamic web language"}
                 type={"languages"}
                 icon={javascriptIcon}/>
               <Skill
                 title={"Python"}
-                description={"MISSING DESCRIPTION"}
+                description={"Versatile scripting"}
                 type={"languages"}
                 icon={pythonIcon}/>
               <Skill
                 title={"C++"}
-                description={"MISSING DESCRIPTION"}
+                description={"High-performance"}
                 type={"languages"}
                 icon={cppIcon}/>
               <Skill
                 title={"TypeScript"}
-                description={"MISSING DESCRIPTION"}
+                description={"Javascript, but with rules"}
                 type={"languages"}
                 icon={typescriptIcon}/>
               <Skill
                 title={"SQL"}
-                description={"MISSING DESCRIPTION"}
+                description={"Query language"}
                 type={"languages"}
                 icon={sqlIcon}/>
               <Skill
                 title={"HTML"}
-                description={"MISSING DESCRIPTION"}
+                description={"Web structure"}
                 type={"languages"}
                 icon={htmlIcon}/>
               <Skill
                 title={"CSS"}
-                description={"MISSING DESCRIPTION"}
+                description={"Web styling"}
                 type={"languages"}
                 icon={cssIcon}/>
               <Skill
                 title={"PHP"}
-                description={"MISSING DESCRIPTION"}
+                description={"Server-side scripting"}
                 type={"languages"}
                 icon={phpIcon}/>
 
               {/* SKILLS: FRAMEWORKS SECTION */}
               <Skill
                 title={"React"}
-                description={"MISSING DESCRIPTION"}
+                description={"Frontend library"}
                 type={"frameworks"}
                 icon={reactIcon}/>
               <Skill
                 title={"Node.js"}
-                description={"MISSING DESCRIPTION"}
+                description={"Backend runtime"}
                 type={"frameworks"}
                 icon={nodeIcon}/>
               <Skill
                 title={"Vite"}
-                description={"MISSING DESCRIPTION"}
+                description={"Fast dev build tool"}
                 type={"frameworks"}
                 icon={viteicon}/>
               <Skill
                 title={"Tailwind"}
-                description={"MISSING DESCRIPTION"}
+                description={"CSS framework"}
                 type={"frameworks"}
                 icon={tailwindIcon}/>
 
               {/* SKILLS: BACKEND SECTION */}
               <Skill
                 title={"REST APIs"}
-                description={"Description Backend"}
+                description={"Backend communication"}
                 type={"backend"}
                 icon={restapiIcon}/>
               <Skill
                 title={"Webhooks"}
-                description={"Description Backend"}
+                description={"Real-time updates"}
                 type={"backend"}
                 icon={webhookIcon}/>
 
               {/* SKILLS: DATABASE SECTION */}
               <Skill
                 title={"MySQL"}
-                description={"Description Database"}
+                description={"SQL-based backend"}
                 type={"database"}
                 icon={mysqlIcon}/>
               <Skill
                 title={"NoSQL"}
-                description={"Description Database"}
+                description={"Flexible data storage"}
                 type={"database"}
                 icon={nosqlIcon}/>
               <Skill
                 title={"Supabase"}
-                description={"Description Database"}
+                description={"Backend-as-a-service"}
                 type={"database"}
                 icon={supabaseIcon}/>
               <Skill
                 title={"LocalStorage"}
-                description={"Description Database"}
+                description={"Browser storage"}
                 type={"database"}
                 icon={localstorageIcon}/>
               
               {/* SKILLS: TOOLS SECTION */}
               <Skill
                 title={"Git"}
-                description={"Description Tools"}
+                description={"Version control"}
                 type={"tools"}
                 icon={gitIcon}/>
               <Skill
                 title={"VSCode"}
-                description={"Description Tools"}
+                description={"Developer IDE"}
                 type={"tools"}
                 icon={vscodeIcon}/>
               <Skill
                 title={"Postman"}
-                description={"Description Tools"}
+                description={"API testing tool"}
                 type={"tools"}
                 icon={postmanIcon}/>
               <Skill
                 title={"Windows"}
-                description={"Description Tools"}
+                description={"Mainstream OS"}
                 type={"tools"}
                 icon={windowsIcon}/>
               <Skill
                 title={"Ubuntu"}
-                description={"Description Tools"}
+                description={"Linux distro"}
                 type={"tools"}
                 icon={ubuntuIcon}/>
               <Skill
                 title={"Figma"}
-                description={"Description Tools"}
+                description={"UI/UX design"}
                 type={"tools"}
                 icon={figmaIcon}/>
               <Skill
                 title={"Adobe Suite"}
-                description={"Description Tools"}
+                description={"Creative tools"}
                 type={"tools"}
                 icon={adobeIcon}/>
               <Skill
                 title={"Google Workspace"}
-                description={"Description Tools"}
+                description={"Team collaboration"}
                 type={"tools"}
                 icon={googleIcon}/>
               <Skill
                 title={"Microsoft Office"}
-                description={"Description Tools"}
+                description={"Word, Excel, etc."}
                 type={"tools"}
                 icon={microsoftIcon}/>
             </div>
