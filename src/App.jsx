@@ -231,7 +231,8 @@ function App() {
                 title={"NoSQL"}
                 description={"Flexible data storage"}
                 type={"database"}
-                icon={nosqlIcon}/>
+                icon={nosqlIcon}
+                iconSize={"w-14/20 h-14/20"}/>
               <Skill
                 title={"Supabase"}
                 description={"Backend-as-a-service"}
@@ -241,7 +242,8 @@ function App() {
                 title={"LocalStorage"}
                 description={"Browser storage"}
                 type={"database"}
-                icon={localstorageIcon}/>
+                icon={localstorageIcon}
+                iconSize={"w-3/5 h-3/5"}/>
               
               {/* SKILLS: TOOLS SECTION */}
               <Skill

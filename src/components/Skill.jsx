@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import missingIcon from '../icons/missing.png';
 
-function Skill({ title, description, type, icon }) {
+function Skill({ title, description, type, icon, iconSize="w-3/4 h-3/4" }) {
 
     const [backgroundColor, setBackgroundColor] = useState("bg-gradient-to-tr from-blue-500 to-blue-700");
 
@@ -54,7 +54,7 @@ function Skill({ title, description, type, icon }) {
                 rounded-lg md:rounded-xl lg:rounded-xl xl:rounded-xl
                 items-center overflow-hidden
                 flex justify-center'>
-                <img src={icon} alt={`${title} icon`} className="w-3/4 h-3/4 object-contain" />
+                <img src={icon} alt={`${title} icon`} className={`${iconSize} object-contain`}/>
             </div>
             <div className='skill-text ml-2 2xl:ml-3 text-white'>
                 <div className='skill-title font-bold
