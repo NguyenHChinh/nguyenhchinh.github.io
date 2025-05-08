@@ -50,7 +50,7 @@ function Skill({ title, description, type, icon }) {
                 md:w-11 md:h-11 md:ml-1.5
                 lg:w-13 lg:h-13 lg:ml-1.5
                 2xl:w-16 2xl:h-16 2xl:ml-2
-                bg-radial from-gray-500 to-gray-600
+                bg-radial from-gray-600 to-gray-800
                 rounded-lg md:rounded-xl lg:rounded-xl xl:rounded-xl
                 items-center overflow-hidden
                 flex justify-center'>
