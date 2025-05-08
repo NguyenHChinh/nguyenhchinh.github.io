@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-function Navbar() {
+function Navbar({ onContactClick }) {
     const [visible, setVisible] = useState(true);
 
     useEffect(() => {
@@ -16,10 +16,8 @@ function Navbar() {
     function handleClick(section) {
         switch (section) {
             case 'about':
-                console.log('about clicked.');
-                break;
             case 'contact':
-                console.log('contact clicked.');
+                onContactClick();
                 break;
             case 'projects':
             case 'skills':

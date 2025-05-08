@@ -1,7 +1,12 @@
 import { useState, useEffect } from 'react';
+
+// Components
 import Navbar from './components/Navbar'
 import CommentLine from './components/CommentLine'
 import Skill from './components/Skill'
+import Modal from './components/Modal'
+
+// Icons
 import javascriptIcon from './icons/javascript.png'
 import pythonIcon from './icons/python.png'
 import cppIcon from './icons/cpp.png'
@@ -34,6 +39,8 @@ function App() {
   const [atTop, setAtTop] = useState(true);
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   useEffect(() => {
     function handleScroll() {
       setAtTop(window.scrollY === 0);
@@ -54,7 +61,18 @@ function App() {
 
   return (
     <div className='App'>
-      <Navbar />
+      <Navbar onContactClick={() => setIsModalOpen(true)}/>
+
+      {/* Modal */}
+      {isModalOpen && (
+        <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/25 backdrop-blur-[5px]'
+          onClick={() => setIsModalOpen(false)}>
+          <div className='w-full max-w-2xl'
+          onClick={(e) => e.stopPropagation()}>
+            <Modal onClose={() => setIsModalOpen(false)}/>
+          </div>
+        </div>
+      )}
 
       {/* Title screen */}
       <div className='hero-container w-4/5'>
