@@ -65,10 +65,10 @@ html{
 
 @keyframes fadeInOut {
     0%, 100% {
-        opacity: 0.25;
+        opacity: 0.30;
     }
     50% {
-        opacity: 0.75;
+        opacity: 0.70;
     }
 }
   

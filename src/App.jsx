@@ -93,7 +93,8 @@ function App() {
       <div className={`transition-opacity duration-300 ${atTop ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
         <CommentLine/>
 
-        <div className='skills-container w-9/10 sm:w-4/5'>
+        {/* Skills Section */}
+        <div className='skills-container w-9/10 sm:w-4/5 max-w-6xl'>
           <h1 className='skills-title w-full mb-7 sm:mb-6  xl:mb-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-left'>
             Here's what I use.
           </h1>
@@ -125,7 +126,7 @@ function App() {
           </div> */}
 
           <div className="w-full flex justify-center mt-8 md:mt-12 xl:mt-16 mb-10">
-            <div className="skills-list-container grid grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-2 sm:gap-3 lg:gap-4 xl:gap-5 w-full max-w-8xl">
+            <div className="skills-list-container grid grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-2 sm:gap-3 lg:gap-4 xl:gap-4 w-full max-w-8xl">
               {/* SKILLS: LANGUAGES SECTION */}
               <Skill
                 title={"JavaScript"}
@@ -144,7 +145,7 @@ function App() {
                 icon={cppIcon}/>
               <Skill
                 title={"TypeScript"}
-                description={"Javascript, but with rules"}
+                description={"JavaScript with types"}
                 type={"languages"}
                 icon={typescriptIcon}/>
               <Skill

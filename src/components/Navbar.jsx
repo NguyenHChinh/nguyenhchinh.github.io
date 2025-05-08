@@ -40,8 +40,8 @@ function Navbar() {
 
     return (
         <div className={`navbar-container transition-opacity duration-300 ${visible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-        <nav className='text-2xl sm:text-3xl lg:text-3xl flex justify-center sm:justify-end items-center fixed top-5 right-5 left-5 sm:left-auto z-50 bg-transparent'>
-            <div className='flex gap-x-10 sm:gap-x-12 font-bold'>
+        <nav className='text-2xl sm:text-3xl xl:text-4xl flex justify-center sm:justify-end items-center fixed top-5 right-5 left-5 sm:left-auto z-50 bg-transparent'>
+            <div className='flex gap-x-10 sm:gap-x-12 lg:gap-x-14 font-bold'>
             {['About', 'Skills', 'Projects', 'Contact'].map((item) => (
                 <button
                 key={item}
