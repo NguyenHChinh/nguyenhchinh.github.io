@@ -46,6 +46,36 @@ function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalSection, setModalSection] = useState("about");
 
+  const skillLinks = {
+    JavaScript: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    Python: "https://www.python.org/",
+    CPP: "https://isocpp.org/",
+    TypeScript: "https://www.typescriptlang.org/",
+    SQL: "https://www.w3schools.com/sql/",
+    HTML: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+    CSS: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+    PHP: "https://www.php.net/",
+    React: "https://reactjs.org/",
+    NodeJS: "https://nodejs.org/",
+    Vite: "https://vitejs.dev/",
+    Tailwind: "https://tailwindcss.com/",
+    RestAPI: "https://restfulapi.net/",
+    Webhooks: "https://webhooks.fyi/",
+    MySQL: "https://www.mysql.com/",
+    NoSQL: "https://www.mongodb.com/nosql-explained",
+    Supabase: "https://supabase.com/",
+    LocalStorage: "https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage",
+    Git: "https://git-scm.com/",
+    VSCode: "https://code.visualstudio.com/",
+    Postman: "https://www.postman.com/",
+    Windows: "https://www.microsoft.com/windows",
+    Ubuntu: "https://ubuntu.com/",
+    Figma: "https://www.figma.com/",
+    Adobe: "https://www.adobe.com/creativecloud.html",
+    Google: "https://workspace.google.com/",
+    Microsoft: "https://www.microsoft.com/microsoft-365",
+  };
+
   useEffect(() => {
     function handleScroll() {
       setAtTop(window.scrollY === 0);
@@ -160,147 +190,175 @@ function App() {
                 title={"JavaScript"}
                 description={"Dynamic web language"}
                 type={"languages"}
-                icon={javascriptIcon}/>
+                icon={javascriptIcon}
+                link={skillLinks["JavaScript"]}/>
               <Skill
                 title={"Python"}
                 description={"Versatile scripting"}
                 type={"languages"}
-                icon={pythonIcon}/>
+                icon={pythonIcon}
+                link={skillLinks["Python"]}/>
               <Skill
                 title={"C++"}
                 description={"High-performance"}
                 type={"languages"}
-                icon={cppIcon}/>
+                icon={cppIcon}
+                link={skillLinks["CPP"]}
+                />
               <Skill
                 title={"TypeScript"}
                 description={"JavaScript with types"}
                 type={"languages"}
-                icon={typescriptIcon}/>
+                icon={typescriptIcon}
+                link={skillLinks["TypeScript"]}/>
               <Skill
                 title={"SQL"}
                 description={"Query language"}
                 type={"languages"}
-                icon={sqlIcon}/>
+                icon={sqlIcon}
+                link={skillLinks["SQL"]}/>
               <Skill
                 title={"HTML"}
                 description={"Web structure"}
                 type={"languages"}
-                icon={htmlIcon}/>
+                icon={htmlIcon}
+                link={skillLinks["HTML"]}/>
               <Skill
                 title={"CSS"}
                 description={"Web styling"}
                 type={"languages"}
-                icon={cssIcon}/>
+                icon={cssIcon}
+                link={skillLinks["CSS"]}/>
               <Skill
                 title={"PHP"}
                 description={"Server-side scripting"}
                 type={"languages"}
-                icon={phpIcon}/>
+                icon={phpIcon}
+                link={skillLinks["PHP"]}/>
 
               {/* SKILLS: FRAMEWORKS SECTION */}
               <Skill
                 title={"React"}
                 description={"Frontend library"}
                 type={"frameworks"}
-                icon={reactIcon}/>
+                icon={reactIcon}
+                link={skillLinks["React"]}/>
               <Skill
                 title={"Node.js"}
                 description={"Backend runtime"}
                 type={"frameworks"}
-                icon={nodeIcon}/>
+                icon={nodeIcon}
+                link={skillLinks["NodeJS"]}/>
               <Skill
                 title={"Vite"}
                 description={"Fast dev build tool"}
                 type={"frameworks"}
-                icon={viteicon}/>
+                icon={viteicon}
+                link={skillLinks["Vite"]}/>
               <Skill
                 title={"Tailwind"}
                 description={"CSS framework"}
                 type={"frameworks"}
-                icon={tailwindIcon}/>
+                icon={tailwindIcon}
+                link={skillLinks["Tailwind"]}/>
 
               {/* SKILLS: BACKEND SECTION */}
               <Skill
                 title={"REST APIs"}
                 description={"Backend communication"}
                 type={"backend"}
-                icon={restapiIcon}/>
+                icon={restapiIcon}
+                link={skillLinks["RestAPI"]}/>
               <Skill
                 title={"Webhooks"}
                 description={"Real-time updates"}
                 type={"backend"}
-                icon={webhookIcon}/>
+                icon={webhookIcon}
+                link={skillLinks["Webhooks"]}/>
 
               {/* SKILLS: DATABASE SECTION */}
               <Skill
                 title={"MySQL"}
                 description={"SQL-based backend"}
                 type={"database"}
-                icon={mysqlIcon}/>
+                icon={mysqlIcon}
+                link={skillLinks["MySQL"]}/>
               <Skill
                 title={"NoSQL"}
                 description={"Flexible data storage"}
                 type={"database"}
                 icon={nosqlIcon}
-                iconSize={"w-14/20 h-14/20"}/>
+                iconSize={"w-14/20 h-14/20"}
+                link={skillLinks["NoSQL"]}/>
               <Skill
                 title={"Supabase"}
                 description={"Backend-as-a-service"}
                 type={"database"}
-                icon={supabaseIcon}/>
+                icon={supabaseIcon}
+                link={skillLinks["Supabase"]}/>
               <Skill
                 title={"LocalStorage"}
                 description={"Browser storage"}
                 type={"database"}
                 icon={localstorageIcon}
-                iconSize={"w-3/5 h-3/5"}/>
+                iconSize={"w-3/5 h-3/5"}
+                link={skillLinks["LocalStorage"]}/>
               
               {/* SKILLS: TOOLS SECTION */}
               <Skill
                 title={"Git"}
                 description={"Version control"}
                 type={"tools"}
-                icon={gitIcon}/>
+                icon={gitIcon}
+                link={skillLinks["Git"]}/>
               <Skill
                 title={"VSCode"}
                 description={"Developer IDE"}
                 type={"tools"}
-                icon={vscodeIcon}/>
+                icon={vscodeIcon}
+                link={skillLinks["VSCode"]}/>
               <Skill
                 title={"Postman"}
                 description={"API testing tool"}
                 type={"tools"}
-                icon={postmanIcon}/>
+                icon={postmanIcon}
+                link={skillLinks["Postman"]}/>
               <Skill
                 title={"Windows"}
                 description={"Mainstream OS"}
                 type={"tools"}
-                icon={windowsIcon}/>
+                icon={windowsIcon}
+                link={skillLinks["Windows"]}/>
               <Skill
                 title={"Ubuntu"}
                 description={"Linux distro"}
                 type={"tools"}
-                icon={ubuntuIcon}/>
+                icon={ubuntuIcon}
+                link={skillLinks["Ubuntu"]}/>
               <Skill
                 title={"Figma"}
                 description={"UI/UX design"}
                 type={"tools"}
-                icon={figmaIcon}/>
+                icon={figmaIcon}
+                link={skillLinks["Figma"]}/>
               <Skill
                 title={"Adobe Suite"}
                 description={"Creative tools"}
                 type={"tools"}
-                icon={adobeIcon}/>
+                icon={adobeIcon}
+                link={skillLinks["Adobe"]}/>
               <Skill
                 title={"Google Workspace"}
                 description={"Team collaboration"}
                 type={"tools"}
-                icon={googleIcon}/>
+                icon={googleIcon}
+                link={skillLinks["Google"]}/>
               <Skill
                 title={"Microsoft Office"}
                 description={"Word, Excel, etc."}
                 type={"tools"}
-                icon={microsoftIcon}/>
+                icon={microsoftIcon}
+                link={skillLinks["Microsoft"]}/>
             </div>
           </div>
 
