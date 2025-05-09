@@ -35,26 +35,51 @@ function Modal({ defaultSection = "about", onClose }) {
         </div>
 
         {/* Modal Content */}
-        <div>
+        <div className='min-h-[280px] transition-all duration-300 ease-in-out'>
             {section === "about" && (
-                <div>
-                    <h2 className="text-2xl font-bold mb-2">About</h2>
-                    <p className="text-gray-700">About section.</p>
-                </div>
+                <section>
+                    <h2 className="text-xl font-bold mb-2">Hi, I'm Chinh!</h2>
+                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                        I'm a recent Computer Science graduate from the University of Kansas,
+                        passionate about building clean and responsive web applications.
+                        I enjoy solving problems with code and learning new technologies.
+                        Whether I'm refining UI/UX or deploying backend features, I aim to write
+                        code that is both efficient and maintainable.
+                    </p>
+                    <p className="text-sm sm:text-base text-gray-700 mt-3">
+                        Outside of tech, I previously competed in FPS games at the collegiate level.
+                        These days, I enjoy gaming casually, studying Japanese, picking up new skills,
+                        and pursuing bodybuilding as a personal goal.
+                    </p>
+                </section>
             )}
 
             {section === "education" && (
-                <div>
-                    <h2 className="text-2xl font-bold mb-2">Education</h2>
-                    <p className="text-gray-700">Education section.</p>
-                </div>
+                <section>
+                <h2 className="text-xl font-bold mb-2">University of Kansas</h2>
+                <p className="text-sm sm:text-base text-gray-700">
+                    <span className="font-semibold">Bachelor of Science in Computer Science</span><br/>
+                    Lawrence, KS | May 2024<br/>
+                    <span className="block">GPA: 3.54 | Major GPA: 3.47</span>
+                </p>
+                    <p className="text-sm sm:text-base text-gray-700 mt-3">
+                    <span className="font-semibold">Key coursework:</span> Data Structures & Algorithms, Database Systems, Operating Systems, Computer Networks, Compiler Construction, and Computer Architecture.
+                </p>
+                </section>
             )}
 
             {section === "contact" && (
-                <div>
-                    <h2 className="text-2xl font-bold mb-2">Contact</h2>
-                    <p className="text-gray-700">Contact section.</p>
-                </div>
+                <section>
+                    <h2 className="text-xl font-bold mb-2">Get in Touch</h2>
+                    <p className="text-sm sm:text-base text-gray-700">
+                        I'm currently actively looking for full-time software engineering opportunities. Please feel free to reach out if you have any questions or would like to connect!
+                    </p>
+                    <ul className="mt-3 space-y-1 text-sm sm:text-base text-gray-700">
+                        <li>Email: <a href="mailto:contact@chinhnguyen.dev" className="text-blue-600 hover:underline">contact@chinhnguyen.dev</a></li>
+                        <li>GitHub: <a href="https://github.com/nguyenhchinh" target="_blank" className="text-blue-600 hover:underline">github.com/nguyenhchinh</a></li>
+                        <li>LinkedIn: <a href="https://linkedin.com/in/nguyenhchinh" target="_blank" className="text-blue-600 hover:underline">linkedin.com/in/nguyenhchinh</a></li>
+                    </ul>
+                </section>
             )}
         </div>
         </div>
