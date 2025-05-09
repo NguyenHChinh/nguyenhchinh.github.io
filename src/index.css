@@ -91,12 +91,10 @@ html{
 .comment-block{
     color: #008000;
     font-family: Consolas, 'Fira Code', 'Courier New', Courier, monospace;
-    margin-bottom: 2rem;
 }
 
 .skills-container{
     margin-bottom: 6rem;
-    margin: 0 auto;
     position: relative;
 }
 

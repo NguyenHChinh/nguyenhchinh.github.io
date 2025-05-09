@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar'
 import CommentLine from './components/CommentLine'
 import Skill from './components/Skill'
+import Project from './components/Project'
 import Modal from './components/Modal'
 
 // Icons
@@ -34,6 +35,9 @@ import figmaIcon from './icons/figma.png'
 import adobeIcon from './icons/adobe.png'
 import googleIcon from './icons/google.png'
 import microsoftIcon from './icons/microsoft.png'
+
+// Project thumbnails
+import kanaganaThumbnail from './projects/kanagana.png'
 
 function App() {
   const [atTop, setAtTop] = useState(true);
@@ -78,7 +82,7 @@ function App() {
       <div className='hero-container w-4/5'>
         {/* Hero title */}
         <div className='hero-title'>
-          <h2 className='comment text-base sm:text-xl lg:text-2xl'>
+          <h2 className='comment text-base sm:text-xl lg:text-2xl mb-2'>
             // Hi, my name is
           </h2>
           <h1 className='text-5xl sm:text-6xl lg:text-8xl font-medium'>
@@ -112,11 +116,11 @@ function App() {
         <CommentLine/>
 
         {/* Skills Section */}
-        <div className='skills-container w-9/10 sm:w-4/5 max-w-6xl'>
+        <div className='skills-container w-9/10 sm:w-4/5 max-w-6xl mx-auto'>
           <h1 className='skills-title w-full mb-7 sm:mb-6  xl:mb-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-left'>
             Here's what I use.
           </h1>
-          <h2 className='comment-block md:leading-5.5 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl'>
+          <h2 className='comment-block md:leading-5.5 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl mb-2'>
             // This is my main tech stack, <br/>
             // and I'm always looking to add more to it. <br/>
           </h2>
@@ -308,12 +312,20 @@ function App() {
         <CommentLine/>
 
         {/* Projects Section */}
-        <div className='projects-container'>
-          <h1 className='projects-title w-full text-3xl sm:text-4xl lg:text-5xl font-bold text-center'>
+        <div className='projects-container mx-auto w-9/10 sm:w-4/5 max-w-6xl'>
+          <h1 className='projects-title w-full text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-center'>
             Here's what I've built.
           </h1>
 
-          <div className='placeholder-box mx-auto w-8/10 h-250 bg-gray-300 rounded-4xl mt-18'>
+          <div className='projects-list-container mt-15'>
+            <Project
+              title={"Kanagana"}
+              description={"A beginner-friendly web application for practicing Hiragana and Katakana."}
+              tags={["React", "Vite", "Language Learning", "Japanese Studying"]}
+              thumbnail={kanaganaThumbnail}/>
+          </div>
+
+          <div className='placeholder-box mx-auto w-10/10 h-250 bg-gray-300 rounded-4xl mt-18'>
             <p className='text-center text-2xl font-bold text-gray-600 pt-10'>
               W.I.P., coming soon!
             </p>
