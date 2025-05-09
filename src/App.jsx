@@ -44,6 +44,7 @@ function App() {
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalSection, setModalSection] = useState("about");
 
   useEffect(() => {
     function handleScroll() {
@@ -65,15 +66,20 @@ function App() {
 
   return (
     <div className='App'>
-      <Navbar onContactClick={() => setIsModalOpen(true)}/>
+      <Navbar onClick={(selection) => {
+        setIsModalOpen(true);
+        setModalSection(selection);
+      }}/>
 
       {/* Modal */}
       {isModalOpen && (
-        <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/25 backdrop-blur-[5px]'
+        <div className='fixed inset-0 z-50 px-8 flex items-center justify-center bg-black/25 backdrop-blur-[5px]'
           onClick={() => setIsModalOpen(false)}>
           <div className='w-full max-w-2xl'
           onClick={(e) => e.stopPropagation()}>
-            <Modal onClose={() => setIsModalOpen(false)}/>
+            <Modal
+              defaultSection={modalSection}
+              onClose={() => setIsModalOpen(false)}/>
           </div>
         </div>
       )}
@@ -333,8 +339,8 @@ function App() {
         </div>
 
         {/* Footer Section */}
-        <div className='footer-container'>
-
+        <div className='footer-container text-center pb-10'>
+          © 2025 Chinh Nguyen. All rights reserved.
         </div>
       </div>
     </div>

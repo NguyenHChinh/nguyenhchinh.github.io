@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-function Navbar({ onContactClick }) {
+function Navbar({ onClick }) {
     const [visible, setVisible] = useState(true);
 
     useEffect(() => {
@@ -16,8 +16,13 @@ function Navbar({ onContactClick }) {
     function handleClick(section) {
         switch (section) {
             case 'about':
+                onClick("about");
+                break;
             case 'contact':
-                onContactClick();
+                onClick("contact");
+                break;
+            case 'education':
+                onClick("education");
                 break;
             case 'projects':
             case 'skills':
@@ -38,9 +43,9 @@ function Navbar({ onContactClick }) {
 
     return (
         <div className={`navbar-container transition-opacity duration-300 ${visible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-        <nav className='text-2xl sm:text-3xl xl:text-4xl flex justify-center sm:justify-end items-center fixed top-5 right-5 left-5 sm:left-auto z-50 bg-transparent'>
-            <div className='flex gap-x-10 sm:gap-x-12 lg:gap-x-14 font-bold'>
-            {['About', 'Skills', 'Projects', 'Contact'].map((item) => (
+        <nav className='text-sm sm:text-xl xl:text-4xl flex justify-center sm:justify-end items-center fixed top-5 right-5 left-5 sm:left-auto z-50 bg-transparent'>
+            <div className='flex gap-x-9 sm:gap-x-12 lg:gap-x-14 font-bold'>
+            {['About', 'Skills', 'Projects', 'Education', 'Contact'].map((item) => (
                 <button
                 key={item}
                 className='hover:text-blue-600 transition-colors cursor-pointer'
