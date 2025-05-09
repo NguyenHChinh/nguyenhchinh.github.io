@@ -43,7 +43,7 @@ function Navbar({ onClick }) {
 
     return (
         <div className={`navbar-container transition-opacity duration-300 ${visible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-        <nav className='text-sm sm:text-xl xl:text-4xl flex justify-center sm:justify-end items-center fixed top-5 right-5 left-5 sm:left-auto z-50 bg-transparent'>
+        <nav className='text-sm sm:text-xl xl:text-2xl flex justify-center sm:justify-end items-center fixed top-5 right-5 left-5 sm:left-auto z-50 bg-transparent'>
             <div className='flex gap-x-8 sm:gap-x-12 lg:gap-x-14 font-bold'>
             {['About', 'Skills', 'Projects', 'Education', 'Contact'].map((item) => (
                 <button
