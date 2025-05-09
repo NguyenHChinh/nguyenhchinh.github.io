@@ -12,10 +12,11 @@ html, body {
 }
   
 body {
+    /* background-color: rgb(204,204,204) */
     background: linear-gradient(
         to bottom right,
-        #eeeeee 0%,
-        #eeeeee 10%,
+        #cccccc 0%,
+        #cccccc 20%,
         #d4e8ff 100%
     );
     background-repeat: no-repeat;
