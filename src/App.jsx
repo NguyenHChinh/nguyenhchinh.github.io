@@ -7,7 +7,13 @@ import Skill from './components/Skill'
 import Project from './components/Project'
 import Modal from './components/Modal'
 
-// Icons
+// Icons for Hero Title
+import downloadIcon from './icons/download.png'
+import githubIcon from './icons/github.png'
+import linkedinIcon from './icons/linkedin.png'
+import emailIcon from './icons/email.png'
+
+// Icons for Skills
 import javascriptIcon from './icons/javascript.png'
 import pythonIcon from './icons/python.png'
 import cppIcon from './icons/cpp.png'
@@ -133,12 +139,57 @@ function App() {
 
         {/* Hero description */}
         {(windowHeight > 500 || !atTop) && (
-          <div className='hero-description'>
-            <p className='text-base md:text-lg lg:text-xl text-justify'>
-              I graduated from the <span className='font-bold'>University of Kansas</span> with a Bachelor's in Computer Science,
-              and I <span className='font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-400'>love building things</span>.
-            </p>
+          <div>
+            {/* Description */}
+            <div className='hero-description'>
+              <p className='text-base md:text-lg lg:text-xl text-justify'>
+                I graduated from the <span className='font-bold'>University of Kansas</span> with a Bachelor's in Computer Science,
+                and I <span className='font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-400'>love building things</span>.
+              </p>
+            </div>
+
+            {/* Contact Buttons */}
+            <div className="scale-75 sm:scale-85 md:scale-90 lg:scale-95 xl:scale-100 origin-left flex gap-4 items-center justify-left mt-1 md:mt-2 lg:mt-3">
+              {/* Download Resume Button */}
+              <a
+                href="/resume.pdf"
+                download
+                className="whitespace-nowrap text-sm sm:text-base flex items-center gap-1.5 pl-2.5 sm:pl-3.5 pr-4 py-2 bg-blue-600 text-white rounded-lg font-semibold transition-transform duration-200 hover:scale-100 cursor-not-allowed w-fit"
+              >
+                <img src={downloadIcon} alt="Download Icon" className="w-4 h-4" />
+                Download Resume
+              </a>
+
+              {/* GitHub Icon */}
+              <a
+                href="https://github.com/NguyenHChinh"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform duration-200 hover:scale-125 cursor-pointer"
+              >
+                <img src={githubIcon} alt="GitHub" className="w-8 h-8" />
+              </a>
+
+              {/* LinkedIn Icon */}
+              <a
+                href="https://www.linkedin.com/in/chinh-nguyen-71b5b6182/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform duration-200 hover:scale-125 cursor-pointer"
+              >
+                <img src={linkedinIcon} alt="LinkedIn" className="w-8 h-8" />
+              </a>
+
+              {/* Email Icon */}
+              <a
+                href="mailto:contact@chinhnguyen.dev"
+                className="transition-transform duration-200 hover:scale-125 cursor-pointer"
+              >
+                <img src={emailIcon} alt="Email" className="w-8 h-8" />
+              </a>
+            </div>
           </div>
+          
         )}
       </div>
 
