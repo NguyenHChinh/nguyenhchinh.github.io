@@ -38,6 +38,8 @@ import microsoftIcon from './icons/microsoft.png'
 
 // Project thumbnails
 import kanaganaThumbnail from './projects/kanagana.png'
+import portfolioThumbnail from './projects/portfolio.png'
+import natsubotThumbnail from './projects/natsubot.png'
 
 function App() {
   const [atTop, setAtTop] = useState(true);
@@ -376,23 +378,36 @@ function App() {
         <CommentLine/>
 
         {/* Projects Section */}
-        <div className='projects-container mx-auto w-9/10 sm:w-4/5 max-w-6xl'>
+        <div className='projects-container mx-auto w-9/10 sm:w-4/5 max-w-5xl'>
           <h1 className='projects-title w-full text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-center'>
             Here's what I've built.
           </h1>
 
           <div className='projects-list-container mt-15'>
             <Project
+              type={"Full-stack Project"}
               title={"Kanagana"}
               description={"A beginner-friendly web application for practicing Hiragana and Katakana."}
               tags={["React", "Vite", "Language Learning", "Japanese Studying"]}
-              thumbnail={kanaganaThumbnail}/>
-          </div>
-
-          <div className='placeholder-box mx-auto w-10/10 h-250 bg-gray-300 rounded-4xl mt-18'>
-            <p className='text-center text-2xl font-bold text-gray-600 pt-10'>
-              W.I.P., coming soon!
-            </p>
+              thumbnail={kanaganaThumbnail}
+              link={"https://github.com/NguyenHChinh/kanagana"}
+              imagelink={"https://chinhnguyen.dev/kanagana/#/"}/>
+            <Project
+              type={"Full-stack Project"}
+              title={"Developer Portfolio"}
+              description={"A personal site to showcase my skills, projects, and experience."}
+              tags={["React", "Vite", "Tailwind", "Responsive Design", "Portfolio"]}
+              thumbnail={portfolioThumbnail}
+              link={"https://github.com/NguyenHChinh/nguyenhchinh.github.io"}
+              imagelink={"https://chinhnguyen.dev"}/>
+            <Project
+              type={"Bot Development"}
+              title={"Natsu (Discord Bot)"}
+              description={"Multi-featured Discord bot with admin tools and niche game utilities."}
+              tags={["Python", "Discord.py", "MySQL", "API Integration", "Live Service"]}
+              thumbnail={natsubotThumbnail}
+              link={"https://github.com/NguyenHChinh/natsu-bot"}
+              imagelink={"https://github.com/NguyenHChinh/natsu-bot"}/>
           </div>
         </div>
 
