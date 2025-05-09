@@ -152,9 +152,9 @@ function App() {
             <div className="scale-75 sm:scale-85 md:scale-90 lg:scale-95 xl:scale-100 origin-left flex gap-4 items-center justify-left mt-1 md:mt-2 lg:mt-3">
               {/* Download Resume Button */}
               <a
-                href="/resume.pdf"
+                href="/ChinhNguyen-Resume.pdf"
                 download
-                className="whitespace-nowrap text-sm sm:text-base flex items-center gap-1.5 pl-2.5 sm:pl-3.5 pr-4 py-2 bg-blue-600 text-white rounded-lg font-semibold transition-transform duration-200 hover:scale-100 cursor-not-allowed w-fit"
+                className="whitespace-nowrap text-sm sm:text-base flex items-center gap-1.5 pl-2.5 sm:pl-3.5 pr-4 py-2 bg-blue-600 text-white rounded-lg font-semibold transition-transform duration-200 hover:scale-105 cursor-pointer w-fit"
               >
                 <img src={downloadIcon} alt="Download Icon" className="w-4 h-4" />
                 Download Resume
