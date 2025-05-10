@@ -123,10 +123,10 @@ function App() {
       )}
 
       {/* Title screen */}
-      <div className='hero-container w-7/10'>
+      <div className='hero-container w-7/10 max-w-5xl'>
         {/* Hero title */}
         <div className='hero-title'>
-          <h2 className='comment text-base sm:text-xl lg:text-2xl mb-2'>
+          <h2 className='comment text-base sm:text-xl lg:text-2xl mb-0'>
             // Hi, my name is
           </h2>
           <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-medium'>
@@ -205,8 +205,8 @@ function App() {
         <CommentLine/>
 
         {/* Skills Section */}
-        <div className='skills-container w-9/10 sm:w-4/5 max-w-6xl mx-auto'>
-          <h1 className='skills-title w-full mb-7 sm:mb-6  xl:mb-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-left'>
+        <div className='skills-container w-9/10 sm:w-4/5 max-w-5xl mx-auto'>
+          <h1 className='skills-title w-full mb-7 text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-left'>
             Here's what I use.
           </h1>
           <h2 className='comment-block md:leading-5.5 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl mb-2'>
@@ -430,11 +430,11 @@ function App() {
 
         {/* Projects Section */}
         <div className='projects-container mx-auto w-9/10 sm:w-4/5 max-w-5xl'>
-          <h1 className='projects-title w-full text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-center'>
+          <h1 className='projects-title w-full text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center'>
             Here's what I've built.
           </h1>
 
-          <div className='projects-list-container mt-15'>
+          <div className='projects-list-container mx-auto mt-15 origin-top scale-90 max-w-4xl'>
             <Project
               type={"Full-stack Project"}
               title={"Kanagana"}

@@ -15,8 +15,8 @@ body {
     /* background-color: rgb(204,204,204) */
     background: linear-gradient(
         to bottom right,
-        #cccccc 0%,
-        #cccccc 20%,
+        #dddddd 0%,
+        #cccccc 30%,
         #d4e8ff 100%
     );
     background-repeat: no-repeat;
@@ -50,7 +50,7 @@ html{
 }
 
 .hero-description{
-    margin-top: 6rem;
+    margin-top: 4rem;
 }
 
 .scroll-indicator {

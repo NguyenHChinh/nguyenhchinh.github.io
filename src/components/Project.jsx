@@ -6,14 +6,14 @@ function Project({ type, title, description, tags, thumbnail, link, imagelink })
             <div className="flex flex-row bg-gray-100 rounded-xl overflow-hidden">
 
                 {/* Text Content */}
-                <div className="w-3/5 p-4 md:p-5 xl:p-7 flex flex-col justify-between">
+                <div className="w-3/5 p-4 md:p-5 xl:p-7 flex flex-col justify-between min-h-55 md:min-h-75">
                     {/* Title and Description */}
                     <div>
                         {/* Comment Block (Type) */}
                         <h2 className="comment-block text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">// {type}</h2>
 
                         {/* Title */}
-                        <h2 className="font-bold mb-1 md:mb-2 lg:mb-3
+                        <h2 className="font-bold mb-1
                             text-xl sm:text-2xl md:text-3xl lg:text-4xl">{title}</h2>
 
                         {/* Description */}

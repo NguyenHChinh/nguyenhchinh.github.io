@@ -73,7 +73,7 @@ function Skill({ title, description, type, icon, iconSize="w-3/4 h-3/4", link })
                     <div className='skill-description font-light
                         text-xs
                         md:text-sm
-                        2xl:text-base'>
+                        2xl:text-sm'>
                         {description}
                     </div>
                 </div>

@@ -74,10 +74,10 @@ function Modal({ defaultSection = "about", onClose }) {
                     <p className="text-sm sm:text-base text-gray-700">
                         I'm currently actively looking for full-time software engineering opportunities. Please feel free to reach out if you have any questions or would like to connect!
                     </p>
-                    <ul className="mt-3 space-y-1 text-sm sm:text-base text-gray-700">
+                    <ul className="mt-6 space-y-1 text-sm sm:text-base text-gray-700">
                         <li>Email: <a href="mailto:contact@chinhnguyen.dev" className="text-blue-600 hover:underline">contact@chinhnguyen.dev</a></li>
                         <li>GitHub: <a href="https://github.com/nguyenhchinh" target="_blank" className="text-blue-600 hover:underline">github.com/nguyenhchinh</a></li>
-                        <li>LinkedIn: <a href="https://linkedin.com/in/nguyenhchinh" target="_blank" className="text-blue-600 hover:underline">linkedin.com/in/nguyenhchinh</a></li>
+                        <li>LinkedIn: <a href="https://www.linkedin.com/in/chinh-nguyen-71b5b6182/" target="_blank" className="text-blue-600 hover:underline">https://www.linkedin.com/in/chinh-nguyen-71b5b6182/</a></li>
                     </ul>
                 </section>
             )}
