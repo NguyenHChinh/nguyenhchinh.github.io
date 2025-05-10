@@ -105,34 +105,31 @@ function App() {
 
   return (
     <div className='App'>
-      <Navbar onClick={(selection) => {
-        setIsModalOpen(true);
-        setModalSection(selection);
-      }}/>
+      <Navbar
+        modalMode={isModalOpen}
+        onClick={(selection) => {
+          setIsModalOpen(true);
+          setModalSection(selection);
+        }
+      }/>
 
       {/* Modal */}
       {isModalOpen && (
-        <div
-          className="absolute inset-0 z-50 px-8 flex items-center justify-center"
-          onClick={() => setIsModalOpen(false)}
-        >
+        <div className="absolute inset-0 z-50 px-8 flex items-center justify-center">
           <div
             className="relative w-full max-w-5xl flex min-h-[400px] drop-shadow-lg/25"
-            onClick={(e) => e.stopPropagation()}
-          >
+            onClick={(e) => e.stopPropagation()}>
             {/* Left side */}
             <div className="w-1/2 slide-in-left">
               <Modal
                 defaultSection={modalSection}
-                onClose={() => setIsModalOpen(false)}
-              />
+                onClose={() => setIsModalOpen(false)}/>
             </div>
 
             {/* Right side */}
             <div className="w-1/2 slide-in-right">
               <Contact
-                onClose={() => setIsModalOpen(false)}
-              />
+                onClose={() => setIsModalOpen(false)}/>
             </div>
           </div>
         </div>
