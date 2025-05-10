@@ -6,6 +6,7 @@ import CommentLine from './components/CommentLine'
 import Skill from './components/Skill'
 import Project from './components/Project'
 import Modal from './components/Modal'
+import Contact from './components/Contact'
 
 // Icons for Hero Title
 import downloadIcon from './icons/download.png'
@@ -111,13 +112,28 @@ function App() {
 
       {/* Modal */}
       {isModalOpen && (
-        <div className='fixed inset-0 z-50 px-8 flex items-center justify-center bg-black/25 backdrop-blur-[5px]'
-          onClick={() => setIsModalOpen(false)}>
-          <div className='w-full max-w-2xl'
-          onClick={(e) => e.stopPropagation()}>
-            <Modal
-              defaultSection={modalSection}
-              onClose={() => setIsModalOpen(false)}/>
+        <div
+          className="absolute inset-0 z-50 px-8 flex items-center justify-center"
+          onClick={() => setIsModalOpen(false)}
+        >
+          <div
+            className="relative w-full max-w-5xl flex min-h-[400px] drop-shadow-lg/25"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Left side */}
+            <div className="w-1/2 slide-in-left">
+              <Modal
+                defaultSection={modalSection}
+                onClose={() => setIsModalOpen(false)}
+              />
+            </div>
+
+            {/* Right side */}
+            <div className="w-1/2 slide-in-right">
+              <Contact
+                onClose={() => setIsModalOpen(false)}
+              />
+            </div>
           </div>
         </div>
       )}

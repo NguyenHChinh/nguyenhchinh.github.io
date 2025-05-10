@@ -146,3 +146,35 @@ html{
     margin-bottom: .75rem;
 }
 
+/* Slide in from left */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Slide in from right */
+@keyframes slideInRight {
+    from {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+  
+.slide-in-left {
+    animation: slideInLeft 0.3s ease-out forwards;
+}
+
+.slide-in-right {
+    animation: slideInRight 0.3s ease-out forwards;
+}
+  
