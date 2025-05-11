@@ -45,12 +45,12 @@ function Modal({ defaultSection = "about", onClose }) {
                 <h2 className="text-base sm:text-xl md:text-xl font-bold mb-2">University of Kansas</h2>
                 <p className="text-sm sm:text-base text-gray-700">
                     <span className="font-semibold">Bachelor of Science in Computer Science</span><br/>
-                    <span className='text-[11px] sm:text-sm'>Lawrence, KS | May 2024</span><br/>
-                    <span className="text-[11px] sm:text-sm block">GPA: 3.54 | Major GPA: 3.47</span>
+                    <span className='text-[11px] sm:text-sm md:text-base'>Lawrence, KS | May 2024</span><br/>
+                    <span className="text-[11px] sm:text-sm md:text-base block">GPA: 3.54 | Major GPA: 3.47</span>
                 </p>
                     <p className="text-sm sm:text-base text-gray-700 mt-3">
                     <span className="font-semibold">Key coursework:</span><br/>
-                    <span className='text-xs sm:text-sm'>Data Structures & Algorithms, Database Systems, Operating Systems, Computer Networks, Compiler Construction, and Computer Architecture.</span>
+                    <span className='text-[11px] sm:text-sm md:text-base'>Data Structures & Algorithms, Database Systems, Operating Systems, Computer Networks, Compiler Construction, and Computer Architecture.</span>
                 </p>
                 </section>
             )}
@@ -62,9 +62,6 @@ function Modal({ defaultSection = "about", onClose }) {
                         I previously competed in FPS games at the collegiate level.
                         These days, I enjoy gaming casually, studying Japanese, picking up new skills,
                         and pursuing bodybuilding as a personal goal.
-                    </p>
-                    <p className="text-[11px] sm:text-sm md:text-base text-gray-700 mt-3">
-                        
                     </p>
                 </section>
             )}
