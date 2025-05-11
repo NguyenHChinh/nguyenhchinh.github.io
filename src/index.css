@@ -153,7 +153,7 @@ html{
 /* Slide in from left */
 @keyframes slideInLeft {
     from {
-        transform: translateX(-50%);
+        transform: translateX(-25%);
         opacity: 0;
     }
     to {
@@ -165,12 +165,37 @@ html{
 /* Slide in from right */
 @keyframes slideInRight {
     from {
-        transform: translateX(50%);
+        transform: translateX(25%);
         opacity: 0;
     }
     to {
         transform: translateX(0);
         opacity: 1;
+    }
+}
+
+/* Override slide in left/right on smaller screen */
+@media (max-width: 640px) {
+    @keyframes slideInLeft {
+        from {
+            transform: translateX(-15%);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideInRight {
+        from {
+            transform: translateX(15%);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
     }
 }
   
