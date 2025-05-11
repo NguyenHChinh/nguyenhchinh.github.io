@@ -63,10 +63,9 @@ function Contact({ onClose }) {
                     <input
                         type="text"
                         id="website"
-                        name="website"
+                        name="_gotcha"
                         autoComplete="off"
-                        tabIndex="-1"
-                        data-formspree-ignore/>
+                        tabIndex="-1"/>
                 </div>
 
                 {/* Name */}
