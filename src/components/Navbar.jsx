@@ -44,13 +44,13 @@ function Navbar({ modalMode, onClick }) {
     }
 
     return (
-        <div className={`navbar-container transition-opacity duration-300 ${visible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-            <nav className='text-sm sm:text-xl xl:text-2xl flex justify-center sm:justify-end items-center fixed top-5 right-5 left-5 sm:left-auto z-100 bg-transparent'>
+        <div className={`navbar-container absolute transition-opacity duration-300 ${visible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+            <nav className='text-black sm:text-white text-lg sm:text-xl xl:text-2xl flex justify-center sm:justify-end items-center fixed top-5 right-5 left-5 sm:left-auto z-100 bg-transparent'>
                 <div className='flex gap-x-8 sm:gap-x-12 lg:gap-x-14 font-bold'>
                     {['About', 'Skills', 'Projects', 'Contact'].map((item) => (
                         <button
                         key={item}
-                        className='hover:text-blue-600 transition-colors cursor-pointer'
+                        className='hover:text-gray-300 hover:underline transition-colors cursor-pointer'
                         onClick={() => handleClick(item.toLowerCase())}
                         >
                         {item}

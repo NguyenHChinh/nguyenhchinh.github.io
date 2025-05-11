@@ -10,6 +10,10 @@
 html, body {
     height: 100%;
 }
+
+body{
+    overflow-x: hidden;
+}
   
 body {
     /* background-color: rgb(204,204,204) */
@@ -177,4 +181,17 @@ html{
 .slide-in-right {
     animation: slideInRight 0.3s ease-out forwards;
 }
+
+@keyframes waveMotion {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(-20px, -10px);
+      
+    }
+  }
   
+.animate-wave {
+    animation: waveMotion 6s ease-in-out infinite;
+}

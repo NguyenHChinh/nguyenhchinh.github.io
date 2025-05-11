@@ -51,6 +51,7 @@ import natsubotThumbnail from './projects/natsubot.png'
 function App() {
   const [atTop, setAtTop] = useState(true);
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+  const [showHeroWave, setShowHeroWave] = useState(window.innerWidth >= 460);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalSection, setModalSection] = useState("about");
@@ -97,6 +98,7 @@ function App() {
   useEffect(() => {
     function handleResize() {
       setWindowHeight(window.innerHeight);
+      setShowHeroWave(window.innerWidth >= 468);
     }
   
     window.addEventListener("resize", handleResize);
@@ -203,6 +205,24 @@ function App() {
             </div>
           </div>
           
+        )}
+
+        {/* Animated Wave */}
+        {showHeroWave && (
+          <div className="absolute -top-87 md:-top-90 lg:-top-95 xl:-top-98 2xl:-top-100 left-1/2 w-[120%] -translate-x-1/2 -z-10 animate-wave">
+            <div className='bg-blue-500 h-100 translate-y-1 w-full'/>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1440 320"
+              className="w-full h-auto"
+            >
+              <path
+                fill="#2b7fff"
+                fillOpacity="1"
+                d="M0,256L48,218.7C96,181,192,107,288,96C384,85,480,139,576,138.7C672,139,768,85,864,69.3C960,53,1056,75,1152,90.7C1248,107,1344,117,1392,122.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+              />
+            </svg>
+          </div>
         )}
       </div>
 
