@@ -12,13 +12,18 @@ function Contact({ onClose }) {
         setCaptchaToken(token);
     };
 
-    const onFormSubmit = (e) => {
+    const onFormSubmit = async (e) => {
         e.preventDefault();
         if (!captchaToken) {
             alert("Please complete the reCAPTCHA.");
             return;
         }
-        handleSubmit(e);
+
+        await handleSubmit(e, {
+            data: {
+                "g-recaptcha-response": captchaToken,
+            },
+        });
     };
 
     if (state.succeeded) {
