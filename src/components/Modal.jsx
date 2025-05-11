@@ -10,7 +10,7 @@ function Modal({ defaultSection = "about", onClose }) {
         <div className="bg-white rounded-l-xl text-black w-full max-w-2xl p-6 relative h-full">
 
         {/* Modal Tabs */}
-        <div className="flex-wrap space-x-6 border-b border-gray-200 pb-4 mb-4">
+        <div className="flex-wrap space-x-6 border-b border-gray-200 pb-2 sm:pb-4 mb-2 sm:mb-4">
             {sections.map((sec) => (
                 <button
                     key={sec}
@@ -41,7 +41,7 @@ function Modal({ defaultSection = "about", onClose }) {
 
             {section === "education" && (
                 <section>
-                <h2 className="text-lg md:text-xl font-bold mb-2">University of Kansas</h2>
+                <h2 className="text-base sm:text-xl md:text-xl font-bold mb-2">University of Kansas</h2>
                 <p className="text-sm sm:text-base text-gray-700">
                     <span className="font-semibold">Bachelor of Science in Computer Science</span><br/>
                     <span className='text-[11px] sm:text-sm'>Lawrence, KS | May 2024</span><br/>
@@ -56,7 +56,7 @@ function Modal({ defaultSection = "about", onClose }) {
 
             {section === "interests" && (
                 <section>
-                    <h2 className="text-xl font-bold mb-2">Outside of tech..</h2>
+                    <h2 className="text-base sm:text-xl font-bold mb-2">Outside of tech..</h2>
                     <p className="text-[11px] sm:text-sm md:text-base text-gray-700 mt-3">
                         I previously competed in FPS games at the collegiate level.
                         These days, I enjoy gaming casually, studying Japanese, picking up new skills,
