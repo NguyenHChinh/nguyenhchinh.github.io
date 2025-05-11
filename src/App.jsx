@@ -137,7 +137,7 @@ function App() {
       {isModalOpen && (
         <div className="absolute inset-0 z-50 px-8 flex items-center justify-center">
           <div
-            className="relative w-full max-w-5xl flex min-h-[505px] sm:min-h-[565px] drop-shadow-2xl/40"
+            className="relative w-full max-w-5xl flex min-h-[440px] sm:min-h-[470px] drop-shadow-2xl/40"
             onClick={(e) => e.stopPropagation()}>
             {/* Left side */}
             <div className="w-1/2 slide-in-left">

@@ -1,30 +1,40 @@
 import { useState, useEffect, useRef } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
-import ReCAPTCHA from 'react-google-recaptcha';
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 
 function Contact({ onClose }) {
-    const [state, handleSubmit] = useForm("meogljpa");
-    const recaptchaRef = useRef(null);
-    const [captchaToken, setCaptchaToken] = useState(null);
-    const SITE_KEY = "6LcMXTUrAAAAAC2XTyDQRC45H-WsvPYWA1cnskJL";
+    const { executeRecaptcha } = useGoogleReCaptcha();
+    const [captchaError, setCaptchaError] = useState(null);
 
-    const onCaptchaChange = (token) => {
-        setCaptchaToken(token);
-    };
+    const [state, handleSubmit] = useForm("meogljpa", {
+        data: {
+
+        }
+    });
 
     const onFormSubmit = async (e) => {
         e.preventDefault();
-        if (!captchaToken) {
-            alert("Please complete the reCAPTCHA.");
+
+        if (!executeRecaptcha) {
+            setCaptchaError("reCAPTCHA not ready");
             return;
         }
 
-        await handleSubmit(e, {
-            data: {
-                "g-recaptcha-response": captchaToken,
-            },
-        });
+        const token = await executeRecaptcha("contact_form");
+        if (!token) {
+            setCaptchaError("Failed to get reCAPTCHA token");
+            return;
+        }
+
+        setCaptchaError(null);
+
+        const form = e.target;
+        const formData = new FormData(form);
+        formData.append("g-recaptcha-response", token);
+
+        await handleSubmit(formData);
     };
+
 
     if (state.succeeded) {
         return (
@@ -110,17 +120,12 @@ function Contact({ onClose }) {
                 </div>
 
                 {/* reCAPTCHA */}
-                <div className='scale-45 sm:scale-65 md:scale-80 lg:scale-80 origin-left'>
-                    <ReCAPTCHA
-                        sitekey={SITE_KEY}
-                        onChange={onCaptchaChange}
-                        ref={recaptchaRef}/>
-                </div>
+                {captchaError && <p className="text-red-400 text-xs">{captchaError}</p>}
 
                 {/* Send Button */}
                 <button
                     type="submit"
-                    disabled={state.submitting || !captchaToken}
+                    disabled={state.submitting}
                     className="bg-blue-600 text-white px-5 py-2 rounded-md text-sm font-semibold hover:bg-blue-700 hover:cursor-pointer transition-colors">
                     {state.submitting ? "Sending..." : "Send"}
                 </button>
