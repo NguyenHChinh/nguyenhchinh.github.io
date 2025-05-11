@@ -159,7 +159,7 @@ function App() {
             <div className='hero-description'>
               <p className='text-base md:text-lg lg:text-xl text-justify'>
                 I graduated from the <span className='font-bold'>University of Kansas</span> with a Bachelor's in Computer Science,
-                and I <span className='font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-400'>love building things</span>.
+                and I <span className='font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-500'>love building things</span>.
               </p>
             </div>
 
@@ -169,7 +169,7 @@ function App() {
               <a
                 href="/ChinhNguyen-Resume.pdf"
                 download
-                className="whitespace-nowrap text-sm sm:text-base flex items-center gap-1.5 pl-2.5 sm:pl-3.5 pr-4 py-2 bg-blue-600 text-white rounded-lg font-semibold transition-transform duration-200 hover:scale-105 cursor-pointer w-fit"
+                className="whitespace-nowrap text-sm sm:text-base flex items-center gap-1.5 pl-2.5 sm:pl-3.5 pr-4 py-2 bg-blue-500 text-white rounded-lg font-semibold transition-transform duration-200 hover:scale-105 cursor-pointer w-fit"
               >
                 <img src={downloadIcon} alt="Download Icon" className="w-4 h-4" />
                 Download Resume
@@ -210,14 +210,20 @@ function App() {
         {/* Animated Wave */}
         {showHeroWave && (
           <div className="absolute -top-87 md:-top-90 lg:-top-95 xl:-top-98 2xl:-top-100 left-1/2 w-[120%] -translate-x-1/2 -z-10 animate-wave">
-            <div className='bg-blue-500 h-100 translate-y-1 w-full'/>
+            <div className='bg-gradient-to-r from-bg-blue-500 to-blue-400 h-100 translate-y-1 w-full'/>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 1440 320"
               className="w-full h-auto"
             >
+              <defs>
+                <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="#296cc9" />
+                  <stop offset="100%" stopColor="#51a2ff" />
+                </linearGradient>
+              </defs>
               <path
-                fill="#2b7fff"
+                fill="url(#waveGradient)"
                 fillOpacity="1"
                 d="M0,256L48,218.7C96,181,192,107,288,96C384,85,480,139,576,138.7C672,139,768,85,864,69.3C960,53,1056,75,1152,90.7C1248,107,1344,117,1392,122.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
               />

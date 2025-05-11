@@ -30,11 +30,12 @@ function Modal({ defaultSection = "about", onClose }) {
                 <section>
                     <h2 className="text-base sm:text-xl font-bold mb-2">A little about me..</h2>
                     <p className="text-[11px] sm:text-sm md:text-base text-gray-700 leading-relaxed">
-                        I'm a recent Computer Science graduate from the University of Kansas,
-                        passionate about building clean and responsive web applications.
-                        I enjoy solving problems with code and learning new technologies.
-                        Whether I'm refining UI/UX or deploying backend features, I aim to write
-                        code that is both efficient and maintainable.
+                        I'm a recent Computer Science graduate from the University of Kansas
+                        with a passion for building functional software. I enjoy creating
+                        web applications and developing tools that enhance the games I play.
+                        I'm driven by problem-solving and continuously learning new technologies.
+                        From refining UI/UX to implementing backend features, I focus on writing clean,
+                        efficient, and maintainable code.
                     </p>
                 </section>
             )}
@@ -61,6 +62,9 @@ function Modal({ defaultSection = "about", onClose }) {
                         I previously competed in FPS games at the collegiate level.
                         These days, I enjoy gaming casually, studying Japanese, picking up new skills,
                         and pursuing bodybuilding as a personal goal.
+                    </p>
+                    <p className="text-[11px] sm:text-sm md:text-base text-gray-700 mt-3">
+                        
                     </p>
                 </section>
             )}
