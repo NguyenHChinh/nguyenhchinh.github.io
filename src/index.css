@@ -195,3 +195,8 @@ html{
 .animate-wave {
     animation: waveMotion 6s ease-in-out infinite;
 }
+
+.website-form {
+    position: absolute;
+    left: -9999px;
+}

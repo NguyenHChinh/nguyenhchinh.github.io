@@ -1,7 +1,25 @@
+import { useState, useEffect, useRef } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 function Contact({ onClose }) {
     const [state, handleSubmit] = useForm("meogljpa");
+    const recaptchaRef = useRef(null);
+    const [captchaToken, setCaptchaToken] = useState(null);
+    const SITE_KEY = "6LcMXTUrAAAAAC2XTyDQRC45H-WsvPYWA1cnskJL";
+
+    const onCaptchaChange = (token) => {
+        setCaptchaToken(token);
+    };
+
+    const onFormSubmit = (e) => {
+        e.preventDefault();
+        if (!captchaToken) {
+            alert("Please complete the reCAPTCHA.");
+            return;
+        }
+        handleSubmit(e);
+    };
 
     if (state.succeeded) {
         return (
@@ -33,24 +51,24 @@ function Contact({ onClose }) {
             {/* Header */}
             <h2 className="text-white text-xs sm:text-sm md:text-xl font-semibold mb-2">Get in touch!</h2>
             <p className="text-[10px] sm:text-sm text-gray-300 mb-4 sm:mb-6">
-                I'm currently actively looking for full-time software engineering opportunities. 
+                I'm currently actively looking for full-time software engineering opportunities.
                 Please feel free to reach out if you have any questions!
             </p>
 
-            {/* Honeypot Field */}
-            <div style={{ display: "none" }}>
-                <label htmlFor="website">Website</label>
-                <input type="text" id="website" name="website" autoComplete="off" />
-            </div>
-
             {/* Form */}
-            <form
-                onSubmit={handleSubmit}
-                action="https://formspree.io/f/meoglpja"
-                method="POST"
-                data-recaptcha-sitekey="6LcMXTUrAAAAAC2XTyDQRC45H-WsvPYWA1cnskJL"
-                className="space-y-3 sm:space-y-4"
-            >
+            <form onSubmit={onFormSubmit} method="POST" className="space-y-3 sm:space-y-4">
+                {/* Hmm.. */}
+                <div className='website-form'>
+                    <label htmlFor="website">Website</label>
+                    <input
+                        type="text"
+                        id="website"
+                        name="website"
+                        autoComplete="off"
+                        tabIndex="-1"
+                        data-formspree-ignore/>
+                </div>
+
                 {/* Name */}
                 <div>
                     <label className="block text-white text-xs sm:text-sm font-medium mb-1" htmlFor="name">Name:</label>
@@ -58,7 +76,9 @@ function Contact({ onClose }) {
                         type="text"
                         id="name"
                         name="name"
+                        required
                         className="w-full border text-white border-gray-300 rounded-md px-2 py-1 sm:px-3 sm:py-2 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+                    <ValidationError prefix="Name" field="name" errors={state.errors} />
                 </div>
 
                 {/* Email */}
@@ -68,6 +88,7 @@ function Contact({ onClose }) {
                         type="email"
                         id="email"
                         name="email"
+                        required
                         className="w-full border text-white border-gray-300 rounded-md px-2 py-1 sm:px-3 sm:py-2 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
                     <ValidationError prefix="Email" field="email" errors={state.errors} />
                 </div>
@@ -79,14 +100,23 @@ function Contact({ onClose }) {
                         id="message"
                         name="message"
                         rows="3"
+                        required
                         className="w-full border text-white border-gray-300 rounded-md px-2 py-1 sm:px-3 sm:py-2 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
                     <ValidationError prefix="Message" field="message" errors={state.errors} />
+                </div>
+
+                {/* reCAPTCHA */}
+                <div className='scale-45 sm:scale-65 md:scale-80 lg:scale-80 origin-left'>
+                    <ReCAPTCHA
+                        sitekey={SITE_KEY}
+                        onChange={onCaptchaChange}
+                        ref={recaptchaRef}/>
                 </div>
 
                 {/* Send Button */}
                 <button
                     type="submit"
-                    disabled={state.submitting}
+                    disabled={state.submitting || !captchaToken}
                     className="bg-blue-600 text-white px-5 py-2 rounded-md text-sm font-semibold hover:bg-blue-700 hover:cursor-pointer transition-colors">
                     {state.submitting ? "Sending..." : "Send"}
                 </button>
