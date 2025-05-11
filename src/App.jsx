@@ -218,7 +218,7 @@ function App() {
             >
               <defs>
                 <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="#296cc9" />
+                  <stop offset="0%" stopColor="#2e82ff" />
                   <stop offset="100%" stopColor="#51a2ff" />
                 </linearGradient>
               </defs>
