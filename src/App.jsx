@@ -209,7 +209,7 @@ function App() {
 
         {/* Animated Wave */}
         {showHeroWave && (
-          <div className="absolute -top-87 md:-top-90 lg:-top-95 xl:-top-98 2xl:-top-100 left-1/2 w-[120%] -translate-x-1/2 -z-10 animate-wave">
+          <div className="absolute origin-top scale-105 -top-87 md:-top-90 lg:-top-95 xl:-top-98 2xl:-top-100 left-1/2 w-full -translate-x-1/2 -z-10 animate-wave">
             <div className='bg-gradient-to-r from-blue-500 to-blue-400 h-100 translate-y-1 w-full'/>
             <svg
               xmlns="http://www.w3.org/2000/svg"
