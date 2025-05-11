@@ -52,6 +52,8 @@ function App() {
   const [atTop, setAtTop] = useState(true);
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
   const [showHeroWave, setShowHeroWave] = useState(window.innerWidth >= 460);
+  const [copied, setCopied] = useState(false);
+  const email = 'contact@chinhnguyen.dev';
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalSection, setModalSection] = useState("about");
@@ -104,6 +106,22 @@ function App() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  const emailClick = async () => {
+    // Smaller screens, mailto:
+    if (window.innerWidth < 768) {
+      window.location.href = `mailto:${email}`;
+    } else {
+    // Larger screens, copy to clipboard
+      try {
+        await navigator.clipboard.writeText(email);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      } catch (err) {
+        console.error('Failed to copy email:', err);
+      }
+    }
+  };
 
   return (
     <div className='App'>
@@ -196,12 +214,19 @@ function App() {
               </a>
 
               {/* Email Icon */}
-              <a
-                href="mailto:contact@chinhnguyen.dev"
-                className="transition-transform duration-200 hover:scale-125 cursor-pointer"
-              >
+              <div className="relative flex items-center">
+                <button
+                  onClick={emailClick}
+                  className="transition-transform duration-200 hover:scale-125 cursor-pointer"
+                >
                 <img src={emailIcon} alt="Email" className="w-8 h-8" />
-              </a>
+                </button>
+                {copied && (
+                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-1 bg-black text-white text-xs rounded px-2 py-1">
+                    Email copied!
+                  </div>
+                )}
+              </div>
             </div>
           </div>
           
