@@ -47,6 +47,7 @@ import microsoftIcon from './icons/microsoft.png'
 import kanaganaThumbnail from './projects/kanagana.png'
 import portfolioThumbnail from './projects/portfolio.png'
 import natsubotThumbnail from './projects/natsubot.png'
+import wordcomboThumbnail from './projects/wordcombo.png'
 
 function App() {
   const [atTop, setAtTop] = useState(true);
@@ -499,6 +500,15 @@ function App() {
           </h1>
 
           <div className='projects-list-container mx-auto mt-15 origin-top scale-90 max-w-4xl'>
+            <Project
+              type={"Full-stack Project"}
+              title={"WordCombo"}
+              description={"A daily word puzzle game where players solve a chain of compound words with limited hints."}
+              tags={["React", "Vite", "Tailwind", "Supabase", "Netlify", "Game Development"]}
+              thumbnail={wordcomboThumbnail}
+              link={"https://github.com/NguyenHChinh/wordcombo"}
+              imagelink={"https://wordcombo.app"}
+            />
             <Project
               type={"Full-stack Project"}
               title={"Kanagana"}
